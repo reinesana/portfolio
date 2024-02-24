@@ -1,9 +1,147 @@
 <!DOCTYPE html>
 
+<html>
+
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="portfolio.css"> 
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     
 </head>
 
 <body>
+
+    <div class="container0">
+        <img src="images/bc_wo_letters.png" class="bg">
+        <img src="images/cloud_final.png" class="clouds">
+    </div>
+
+    <div class="letters">
+        <img src="images/S_letter.png" class="S">
+        <img src="images/H_letter.png" class="H">
+        <img src="images/A1_letter.png" class="A1">
+        <img src="images/N_letter.png" class="N">
+        <img src="images/A2_letter.png" class="A2">
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="">home</a></li>
+            <li><a href="">resume</a></li>
+            <li><a href="">experience</a></li>
+        </ul>
+    </nav>
+    
+
+    <div class="clock">
+        <img src="images/clock_face.png">
+    </div>
+
+
+    <div class="intro">
+        <h3>About me</h3>
+        <p>I am Shana Kesia Nursoo, a second year computer science student at Simon Fraser University. I am currently a member of WiCs and the previous head of STEMpowerment and Chapters program at Canada's National Stem Fellowship.</p>
+
+        <p>Here are some technologies I have been working with:</p>
+        <ul>
+            <li>Home</li>
+            <li>This</li>
+        </ul>
+    </div>
+
+
+
+    <div class="clock2">
+        <img src="images/clock_face.png">
+    </div>
+    
+    <div class="experience">
+        <h3>Relevent Experiences</h3>
+        <div class="stem">
+            <h4>Stem Fellowship (2019-2022)</h4>
+            <p>As the head of STEMPowerement and the Chapters program at Stem Fellowship, I gained experience as a mentor and organizer for the Big Data Challege, an analytics-related competition for scholarly publications and manuscripts </p>
+        </div>
+
+        <div class="wics">
+            <h4>Womens in Computer Science (2023-2024)</h4>
+            <p>As a member of WiCs at SFU, I participated in a mentorship program for highschool girls interested in coding. I was also involved in the organization of WiCs conferences.</p>
+        </div>
+</div>
+
+
+<div class="container5">
+    <div id="slide">
+        <div class="item" style="background-image: url(images/brain_MRI_image.jpg);">
+            <div class="content">
+                <div class="name">LUNDEV</div>
+                <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                <button>See more</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(/images/background.jpg);">
+            <div class="content">
+                <div class="name">LUNDEV</div>
+                <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                <button>See more</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(images/blur.jpg);">
+            <div class="content">
+                <div class="name">LUNDEV</div>
+                <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                <button>See more</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(images/poster.png);">
+            <div class="content">
+                <div class="name">LUNDEV</div>
+                <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                <button>See more</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(images/brain_MRI_image.jpg);">
+            <div class="content">
+                <div class="name">LUNDEV</div>
+                <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                <button>See more</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(images/poster.png);">
+            <div class="content">
+                <div class="name">LUNDEV</div>
+                <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                <button>See more</button>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+        <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+<script>
+    ScrollReveal({ 
+        reset: true,
+        distance: '60px',
+        duration: 2500,
+        delay: 300
+        });
+    ScrollReveal().reveal('.intro', { delay: 600 });
+    ScrollReveal().reveal('.experience', { delay: 600 });
+</script>
+
+
+
+<div class="end_credits">
+    <p>VG5000 by Justin Bihan. Distributed by velvetyne.fr.</p>
+</div>
     
 </body>
+
+</html>
