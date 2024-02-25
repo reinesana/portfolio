@@ -8,11 +8,13 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 
 <body>
+
+    
 
     <div class="container0">
         <img src="images/bc_wo_letters.png" class="bg">
@@ -30,11 +32,23 @@
     <nav class="navbar">
         <ul>
             <li><a href="">home</a></li>
-            <li><a href="">resume</a></li>
-            <li><a href="">experience</a></li>
+            <li><a href="#" onclick="scrollToSection('projects'); return false;">projects</a></li>
+            <li><a href="">contact</a></li>
         </ul>
     </nav>
     
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                var offset = section.offsetTop - 50; // Adjust the offset as needed
+                window.scrollTo({
+                    top: offset,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    </script>
 
     <div class="clock">
         <img src="images/clock_face.png">
@@ -45,11 +59,6 @@
         <h3>About me</h3>
         <p>I am Shana Kesia Nursoo, a second year computer science student at Simon Fraser University. I am currently a member of WiCs and the previous head of STEMpowerment and Chapters program at Canada's National Stem Fellowship.</p>
 
-        <p>Here are some technologies I have been working with:</p>
-        <ul>
-            <li>Home</li>
-            <li>This</li>
-        </ul>
     </div>
 
 
@@ -71,49 +80,42 @@
         </div>
 </div>
 
+<div class="projects" section id="projects">
+    <h2>Personal Projects</h2>
+</div>
 
 <div class="container5">
     <div id="slide">
-        <div class="item" style="background-image: url(images/brain_MRI_image.jpg);">
+        <div class="item" style="background-image: url(images/front_page.png);">
             <div class="content">
-                <div class="name">LUNDEV</div>
-                <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
-                <button>See more</button>
+                <div class="name">Personal Projects</div>
+                <div class="des">Here are some technologies I have been working with: Python, C++, HTML, CSS, JavaScript, Tensorflow, Scrikit-learn, Anaconda, GitHub
+                </div>
             </div>
         </div>
-        <div class="item" style="background-image: url(/images/background.jpg);">
+        <div class="item" style="background-image: url(images/hospital.png);">
             <div class="content">
-                <div class="name">LUNDEV</div>
-                <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
-                <button>See more</button>
+                <div class="name">MRI: Brain Tumor Classification</div>
+                <div class="languages">python pytorch</div>
+                <div class="des">Developed and trained a convolutional neural network model to distinguish between malignant and benign brain tumors from MRI scans in PyTorch. Achieved 100% accuracy upon training the model by using an Adam optimizer and Binary Cross-Entropy Loss.</div>
+                <button>github</button>
             </div>
         </div>
-        <div class="item" style="background-image: url(images/blur.jpg);">
+        <div class="item" style="background-image: url(images/hospital_scan.png);">
             <div class="content">
-                <div class="name">LUNDEV</div>
-                <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
-                <button>See more</button>
+                <div class="name">heart disease</div>
+                <div class="languages">python scrikit-learn</div>
+                <div class="des">Implemented a ML pipeline, utilizing ML techniques, including RandomForestClassifier and GridSearchCV, to identify key predictors of heart disease. Achieved 86% accuracy in heart disease prediction upon applying train-test split and cross-validation techniques.
+                </div>
+                <button>github</button>
             </div>
         </div>
-        <div class="item" style="background-image: url(images/poster.png);">
+        <div class="item" style="background-image: url(images/titanic_icebreg.png);">
             <div class="content">
-                <div class="name">LUNDEV</div>
-                <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
-                <button>See more</button>
-            </div>
-        </div>
-        <div class="item" style="background-image: url(images/brain_MRI_image.jpg);">
-            <div class="content">
-                <div class="name">LUNDEV</div>
-                <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
-                <button>See more</button>
-            </div>
-        </div>
-        <div class="item" style="background-image: url(images/poster.png);">
-            <div class="content">
-                <div class="name">LUNDEV</div>
-                <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
-                <button>See more</button>
+                <div class="name">Titanic: Survival Prediction</div>
+                <div class="languages">python matplot seaborn</div>
+                <div class="des">Analysed a Titanic passenger dataset to predict survival outcomes using Machine Learning models including KNeighborsClassifier, Linear & Logistic Regression and Naive Bayes to identify patterns correlating with survival rate.</div>
+                <button>github</button>
             </div>
         </div>
     </div>

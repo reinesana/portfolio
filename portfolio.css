@@ -25,11 +25,6 @@
 }
 
 
-
-
-
-
-
 html, body {
     margin:0;
     overflow-x: hidden; /* Enable vertical scrolling */
@@ -162,18 +157,23 @@ img {
 
 
 .intro ul {
+    padding: 1vw 2vw;
+    margin: 1vw 0;
+}
+
+
+.intro li {
     color: rgb(0, 0, 0);
     font-size: 1.3vw; /* Initial font size based on viewport width */
     text-decoration: none;
-    padding: 1vw 2vw;
-    margin: 2vw 0;
+    list-style-type: georgian ;
     border-radius: 1vw;
+
     display: block;
     text-align: left;
     font-family: inter;
     width: 100%; /* Make text fill the intro */
-    top:-10vw;
-
+    top:-6vw;
 }
 
 .container2 ul {
@@ -189,8 +189,8 @@ img {
     display:block;
     width: 70%;
     height: 70%;
-    left: -10.5vw;
-    top: 6vw;
+    left: -10vw;
+    top: 0vw;
     animation-name: clock;
     animation-duration: 90s;
     animation-iteration-count: infinite;
@@ -206,7 +206,7 @@ img {
     width: 70%;
     height: 70%;
     left: 37vw;
-    bottom: 45vw;
+    bottom: 35vw;
     animation-name: clock2;
     animation-duration: 90s;
     animation-iteration-count: infinite;
@@ -221,7 +221,7 @@ img {
     position: relative;
     z-index: 1; /* Ensure intro is above other content */
     width: 60vw; /* Initial width based on viewport width */
-    top:-95vw;
+    top:-85vw;
     left: 35vw;
 }
 
@@ -285,23 +285,46 @@ img {
     top:-6vw;
 }
 
+.projects h2 {
+    font-weight: 600;
+    font-size: 3.5vw; /* Initial font size based on viewport width */
+    text-decoration: none;
+    border-radius: 1vw;
+    display: block;
+    width: 100%; /* Make text fill the intro */
+    font-family: pulse1;
+    text-align: center;
+}
+
+
+.projects {
+    display:block;
+    position: relative;
+    z-index: 1; /* Ensure intro is above other content */
+    width: 60vw; /* Initial width based on viewport width */
+    top:-55vw;
+    left: 21vw;
+}
+
 
 .container5{
     position: absolute;
     width:65%;
     height:60%;
     padding:50px;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     box-shadow: 0 30px 50px #dbdbdb;
-    left:10vw;
-    top:2000px;
-
-
+    left:14vw;
+    top:197vw;
+    border-radius: 30px 30px 30px 30px;
     
 }
+
+
 #slide{
     width:max-content;
     margin-top:50px;
+    
 }
 .item{
     width:200px;
@@ -327,52 +350,95 @@ img {
     height:100%;
     box-shadow: none;
 }
+
 .item:nth-child(3){
-    left:50%;
+    left:65%;
 }
 .item:nth-child(4){
-    left:calc(50% + 220px);
+    left:calc(65% + 220px);
 }
-.item:nth-child(5){
-    left:calc(50% + 440px);
-}
-.item:nth-child(n+6){
-    left:calc(50% + 660px);
+.item:nth-child(4+n){
+    left:calc(65% + 440px);
     opacity: 0;
 }
+
 .item .content{
     position: absolute;
     top:50%;
-    left:100px;
-    width:300px;
+    left:60px;
+    width:500px;
     text-align: left;
     padding:0;
     color:#eee;
     transform: translate(0,-50%);
     display: none;
     font-family: system-ui;
+    
 }
+
+
 .item:nth-child(2) .content{
     display: block;
     z-index: 11111;
 }
 .item .name{
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 30px;
+    font-family:apex;
+    font-weight:600;
     opacity: 0;
-    animation:showcontent 1s ease-in-out 1 forwards
+    animation:showcontent 1s ease-in-out 1 forwards;
+    color: black;
 }
-.item .des{
-    margin:20px 0;
+
+.item .languages{
+    margin-top: 5px;
+    margin-bottom:5px;
+    margin:0;
     opacity: 0;
-    animation:showcontent 1s ease-in-out 0.3s 1 forwards
+    animation:showcontent 1s ease-in-out 0.3s 1 forwards;
+    font-family: apex;
+    font-size: medium;
+    font-style: italic;
+    color: black;
+}
+
+.item .des{
+    margin-top: 10 px;
+    margin:10px 0;
+    opacity:0;
+    animation:showcontent 1s ease-in-out 0.3s 1 forwards;
+    color: rgb(36, 36, 36);
+    font-size:1.3vw;
+    text-decoration: none;
+    padding-bottom: 10px;
+    display: block;
+    text-align: left;
+    font-family: inter;
+    width: 100%; 
+    font-weight: 100px;
 }
 .item button{
     padding:10px 20px;
+    margin-top:10px;
     border:none;
     opacity: 0;
-    animation:showcontent 1s ease-in-out 0.6s 1 forwards
+    animation:showcontent 1s ease-in-out 0.6s 1 forwards;
+    /* From https://css.glass */
+    background-color: rgba(255, 255, 255, 0.19);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 0.5s;
+    font-family: anta;
+    color:#d5e8f7;
 }
+
+.item button:hover {
+    background-color: #d8deeaaf;
+}
+
 @keyframes showcontent{
     from{
         opacity: 0;
@@ -387,20 +453,33 @@ img {
 .buttons{
     position: absolute;
     bottom:30px;
+    left: 10px;
     z-index: 222222;
     text-align: center;
     width:100%;
+
 }
+
+
+
+.buttons button:hover{
+    background-color: #d5e8f7;
+}
+  
 .buttons button{
     width:50px;
     height:50px;
     border-radius: 50%;
     border:1px solid #555;
     transition: 0.5s;
-}.buttons button:hover{
-    background-color: #bac383;
+    /* From https://css.glass */
+    background-color: rgba(255, 255, 255, 0.19);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
-  
+
 
 /* Default styles */
 .letters {
@@ -588,6 +667,9 @@ img {
     }
 
 }
+
+
+  
 
 
 
