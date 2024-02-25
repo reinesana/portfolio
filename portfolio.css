@@ -143,7 +143,7 @@ img {
 
 .intro p {
     color: rgb(0, 0, 0);
-    font-size: 1.3vw; /* Initial font size based on viewport width */
+    font-size: 1.1vw; /* Initial font size based on viewport width */
     text-decoration: none;
     padding: 1vw 2vw;
     margin: 2vw 0;
@@ -261,7 +261,7 @@ img {
 
 .experience .stem p {
     color: rgb(0, 0, 0);
-    font-size: 1.3vw; /* Initial font size based on viewport width */
+    font-size: 1.1vw; /* Initial font size based on viewport width */
     text-decoration: none;
     padding-bottom: 10px;
     border-radius: 1vw;
@@ -275,7 +275,7 @@ img {
 
 .experience .wics p {
     color: rgb(0, 0, 0);
-    font-size: 1.3vw; /* Initial font size based on viewport width */
+    font-size: 1.1vw; /* Initial font size based on viewport width */
     text-decoration: none;
     border-radius: 1vw;
     display: block;
@@ -316,7 +316,7 @@ img {
     box-shadow: 0 30px 50px #dbdbdb;
     left:14vw;
     top:197vw;
-    border-radius: 30px 30px 30px 30px;
+    border-radius: 30px;
     
 }
 
@@ -352,13 +352,13 @@ img {
 }
 
 .item:nth-child(3){
-    left:65%;
+    left:70%;
 }
 .item:nth-child(4){
-    left:calc(65% + 220px);
+    left:calc(70% + 220px);
 }
 .item:nth-child(4+n){
-    left:calc(65% + 440px);
+    left:calc(70% + 440px);
     opacity: 0;
 }
 
@@ -400,6 +400,7 @@ img {
     font-size: medium;
     font-style: italic;
     color: black;
+    font-size:large;
 }
 
 .item .des{
@@ -408,7 +409,7 @@ img {
     opacity:0;
     animation:showcontent 1s ease-in-out 0.3s 1 forwards;
     color: rgb(36, 36, 36);
-    font-size:1.3vw;
+    font-size:1vw;
     text-decoration: none;
     padding-bottom: 10px;
     display: block;
@@ -416,6 +417,7 @@ img {
     font-family: inter;
     width: 100%; 
     font-weight: 100px;
+    
 }
 .item button{
     padding:10px 20px;
