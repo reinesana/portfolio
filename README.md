@@ -1,2 +1,5 @@
 # portfolio
-personal portfolio showcasing projects and achievements
+personal portfolio showcasing personal project and experience.
+Visit my portfolio:
+[
+](https://shanakesia.netlify.app)https://shanakesia.netlify.app
