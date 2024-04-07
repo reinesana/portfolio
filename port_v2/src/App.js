@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
 import Boxes from './components/Boxes';
 import Render from './components/Render';
 import Landing from './components/Landing';

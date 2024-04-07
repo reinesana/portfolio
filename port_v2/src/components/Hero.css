@@ -1,38 +1,15 @@
 .hero-container {
-    background-image: url('/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/public/images/bg1.jpg'); /* Dark background for contrast */
+    background-image: url('/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/public/images/hero_img.png');
+    background-size: cover;
     color: white;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-}
+    position:absolute;
+    width: 99vw;
+    height: 300vh; /* Set the height of the container to the full viewport height */
+
+  }
+
 
   
-  .hero-container h1 {
-    font-size: 2.5rem; /* Large font size for the main heading */
-    margin-bottom: 0.5rem;
-  }
   
-  .hero-container p {
-    font-size: 1.2rem; /* Slightly larger font size for subtext */
-    margin-bottom: 2rem;
-  }
-  
-  .hero-btn {
-    display: inline-block;
-    background-color: #61dafb; /* Bright, attention-grabbing color */
-    color: #282c34; /* Dark text for contrast */
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none; /* Remove underline from the link */
-    font-weight: bold;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-  }
-  
-  .hero-btn:hover {
-    background-color: #4f9dbb; /* Darker shade of the button color for hover state */
-  }
+
   

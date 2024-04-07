@@ -5,12 +5,12 @@ const Boxes = ({ image, title }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const cardStyle = {
-    borderRadius: '8px',
+    borderRadius: '15px',
     overflow: 'hidden',
-    marginTop: '20px',
-    width: isHovered ? '30%' : '20%',
+    marginTop: '15px',
+    width: isHovered ? '23%' : '18%',
     transition: 'all 0.3s ease-in-out',
-    height: '350px',
+    height: '450px',
     position: 'relative', 
     cursor: 'pointer', 
   };
@@ -98,13 +98,13 @@ const Boxes = ({ image, title }) => {
           }}
         />
         <div style={textStyle}>
-          <h2 style={{ fontSize: '24px', lineHeight: '1em', marginBottom: '1rem' }}>{title}</h2>
+          <h2 style={{ fontSize: '20px', lineHeight: '1em', marginBottom: '1rem' }}>{title}</h2>
           <p style={{ margin: '0 0 0.5rem 0' }}>
             box
           </p>
           <button style={buttonStyle}>
             Get Started
-            <RiArrowRightSLine style={{ width: '28px', height: '28px', marginLeft: '0.5rem' }} />
+            <RiArrowRightSLine style={{ width: '20px', height: '20px', marginLeft: '0.5rem' }} />
           </button>
         </div>
       </div>
