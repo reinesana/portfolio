@@ -7,9 +7,10 @@ import Render from './Render';
 // Define the Landing component as a functional component
 const Landing = () => {
   return (
-    <div style={{ width: '100%', height: '100%' }}>
+    <div style={{ width: 'auto', height: 'auto'  }}>
       {/* Include the Navbar component */}
       <Navbar />
+
 
       {/* Include the Hero component */}
       <Hero />

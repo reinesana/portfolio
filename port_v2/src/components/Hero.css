@@ -1,14 +1,67 @@
 .hero-container {
-    background-image: url('/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/public/images/hero_img.png');
-    background-size: cover;
-    color: white;
-    position:absolute;
-    width: 99vw;
-    height: 300vh; /* Set the height of the container to the full viewport height */
+  display: flex;
+  position: absolute;
+  top: 20vw; /* Adjust top position as needed */
+  width: 100vw; /* Make it span the entire width of the viewport */
+}
 
+.left-image {
+  width: 50vw;
+  height: 40vw;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+
+  
+  
+.hero-container .scroll {
+  position: relative;
+  display: flex;
+  width: 300px;
+  height: 100px;
+  left: 450px;
+  font-size: 50px;
+  top: 175px;
+  overflow: hidden;
+  background: red;
+  -webkit-mask-image: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroll div {
+  white-space: nowrap;
+  animation: animate var(--t) linear infinite;
+}
+
+@keyframes animate 
+{
+  0%
+  {
+    transform: translateX(0%);
   }
+  100%
+  {
+    transform: translateX(-80%);
+  }
+}
 
+.scroll div span {
+  display: inline-flex;
+  margin: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color:white;
+  padding: 5px 1px;
+  border-radius: 5px;
+  transition: 0.5s;
+  
 
+}
+
+.scroll div span:hover {
+  background: green;
+  cursor: pointer;
+}
   
   
 
