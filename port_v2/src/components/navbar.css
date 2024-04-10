@@ -1,0 +1,57 @@
+/* Navbar.css */
+.navbar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    position: fixed; /* Fixed at the top */
+    width: 100%;
+    z-index: 1000; /* Ensures navbar stays on top of other content */
+  }
+  
+  .nav-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Center the navigation menu */
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Space between icons */
+  }
+  
+  .nav-item {
+    display: flex;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white; /* Icon color */
+  }
+  
+  .nav-links img {
+    width: 70%;
+    transition: transform 0.2s ease-in-out; /* Smooth scaling on hover */
+  }
+  
+  .nav-links:hover img,
+  .nav-links:focus img {
+    transform: scale(1.1); /* Slightly enlarge icons on hover/focus */
+  }
+  
+  /* Responsive Navbar */
+  @media screen and (max-width: 768px) {
+    .nav-container {
+      justify-content: space-around; /* Adjust spacing on smaller screens */
+    }
+  
+    .nav-links img {
+      width: 35px; /* Slightly smaller icons on smaller screens */
+      height: 35px;
+    }
+  }
+  

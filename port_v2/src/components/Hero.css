@@ -1,30 +1,84 @@
 .hero-container {
   display: flex;
-  position: absolute;
-  top: 20vw; /* Adjust top position as needed */
-  width: 100vw; /* Make it span the entire width of the viewport */
+  position: relative; /* Changed from absolute to relative */
+  top: 20vw;
+  width: 100vw;
+  flex-wrap: nowrap;
+  justify-content: space-around; /* Ensure children are spaced out */
+  align-items: center; /* Vertically center items in the container */
 }
+
+.left-image, .right-image {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  max-width: 35%;
+  height: auto;
+}
+
 
 .left-image {
-  width: 50vw;
-  height: 40vw;
-  margin-left: 0;
-  padding-left: 0;
+  max-width: 10%;
+  animation-name: slideInFromLeft;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
 }
 
+.right-image {
+  max-width: 950px;
+  margin-left: auto;
+  animation-name: slideInFromRight;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
 
-  
-  
-.hero-container .scroll {
-  position: relative;
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    top: 0;
+  }
+
+  .left-image, .right-image {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .right-image {
+    margin-top: 5vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-container {
+    top: 10vw;
+  }
+
+  .left-image, .right-image {
+    width: 80vw;
+    height: auto;
+  }
+
+  .right-image {
+    margin-top: 3vh;
+  }
+}
+
+/* Styles for scrolling text */
+.scroll {
+  position: absolute;
   display: flex;
-  width: 300px;
-  height: 100px;
-  left: 450px;
-  font-size: 50px;
-  top: 175px;
+  width: 55vw;
+  max-width: 100%;
+  height: 120px;
+  z-index: 1000;
+  left: 78%;
+  top: -29%;
+  transform: translateX(-50%);
+  font-size: calc(6vw + 1em);
   overflow: hidden;
-  background: red;
+  font-weight: bolder;
   -webkit-mask-image: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
@@ -33,36 +87,63 @@
   animation: animate var(--t) linear infinite;
 }
 
-@keyframes animate 
-{
-  0%
-  {
+@keyframes animate {
+  0% {
     transform: translateX(0%);
   }
-  100%
-  {
-    transform: translateX(-80%);
+  100% {
+    transform: translateX(-72%);
   }
 }
 
 .scroll div span {
   display: inline-flex;
   margin: 10px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color:white;
+  color: rgba(128, 128, 128, 0.135);
   padding: 5px 1px;
   border-radius: 5px;
   transition: 0.5s;
-  
-
 }
 
-.scroll div span:hover {
-  background: green;
+.animated-text {
+  position:absolute;
+  top: -35px; /* Adjust as needed to place text correctly above images */
+  left: 20px;
+  width: 80%; /* Ensures full width */
+  z-index: 10; /* Ensures text appears above images */
+}
+
+.animated-text h1 {
+  font-family:monospace;
+  font-weight: 600;
+  font-size:24px;
+  color: rgb(168, 168, 168);
+  padding: 0.5rem;
+  margin: 0 auto; /* Removed top margin to better control positioning */
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.animated-text h1:hover {
+  color: rgb(58, 57, 57);
   cursor: pointer;
 }
-  
-  
 
-  
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
