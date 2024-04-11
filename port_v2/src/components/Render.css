@@ -1,27 +1,30 @@
-.projects_container {
-    display: flex;
-    position: relative;
-    top: 40vw;
-    width: 91%;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
+
+
+.proj-container {
+  background-image: url('./images/projects_container.png');
+  background-size: cover;
+  background-position: center;
+  top: 30vh;
+  margin-right: 1.5vw;
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-left: 1.7vh;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 
+/* Individual Boxes styling for background images which isn't specified but assumed from context */
+.box-container {
+  position: relative; /* Relative positioning to hold the boxes */
+}
 
-.animated-projects {
-    position: absolute;
-    text-align: right;
-    top: 5vw; /* Adjust as needed to place text correctly above images */
-    right: -7.5vw;
-    width: 30%; /* Ensures full width */
-    z-index: 10; /* Ensures text appears above images */
-  }
+
   
   .animated-projects span {
     display: inline-flex;
-    margin: 10px;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: rgba(16, 15, 15, 0.688);
@@ -39,10 +42,14 @@
     height: 120px;
     z-index: 1000;
     left: 91%;
-    top: 11%;
     transform: translateX(-50%);
     font-size: calc(3vw + 1em);
     font-weight: bolder;
+    text-align: right;
+    top: 5vw; /* Adjust as needed to place text correctly above images */
+    right: -7.5vw;
+    z-index: 10; /* Ensures text appears above images */
+    margin-right: 2vw;
   }
   
   .animated-projects span:hover {

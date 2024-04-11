@@ -12,6 +12,8 @@ const Boxes = ({ image, tag_image, title, box, githubLink }) => {
     width: isHovered ? '25%' : '17%',
     transition: 'all 0.3s ease-in-out',
     height: '450px',
+    top: '-54vh',
+    left: '15vh',
     position: 'relative', 
     cursor: 'pointer', 
   };

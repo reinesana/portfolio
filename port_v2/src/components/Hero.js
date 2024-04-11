@@ -1,10 +1,41 @@
 import React, { useEffect, useRef } from 'react';
 import './Hero.css'; 
-import leftImage from '/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/src/components/images/left_image.png';
-import rightImage from '/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/src/components/images/right_image.png';
+import heroImage from '/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/src/components/images/hero_image.png';
+import heroContainer from '/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/src/components/images/hero_container.png';
+
 
 function Hero() {
-  const headingRef = useRef(null); // Create a ref for the animated text
+  const tiltRef = useRef(null); // Ref for the tilt background
+  const headingRef = useRef(null); // Ref for the animated text
+
+  const tiltMove = (x, y) => {
+    const boundedX = Math.max(Math.min(x, 10), -10); // Limit the maximum tilt angles to 10 degrees
+    const boundedY = Math.max(Math.min(y, 10), -10);
+    return `perspective(1000px) rotateX(${boundedX}deg) rotateY(${boundedY}deg) scale(1.1)`;
+  };
+
+  useEffect(() => {
+    const tilt = tiltRef.current;
+    if (tilt) {
+      const handleMouseMove = (e) => {
+        const rect = tilt.getBoundingClientRect();
+        const x = e.clientX - rect.left - (rect.width / 2);
+        const y = e.clientY - rect.top - (rect.height / 2);
+        const multiplier = 0.05; // Controls the tilt sensitivity
+
+        const xRotate = (y / rect.height) * multiplier * 180;
+        const yRotate = -(x / rect.width) * multiplier * 180;
+
+        tilt.style.transform = tiltMove(xRotate, yRotate);
+      };
+
+      tilt.addEventListener('mousemove', handleMouseMove);
+
+      return () => {
+        tilt.removeEventListener('mousemove', handleMouseMove);
+      };
+    }
+  }, []);
 
   useEffect(() => {
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -32,19 +63,17 @@ function Hero() {
         }
 
         iteration += 1 / 3;
-      }, 20);
+      }, 15);
     };
 
-    // Attach the event listener
     const heading = headingRef.current;
     if (heading) {
       heading.addEventListener('mouseover', animateText);
     }
 
-    // Clean up the event listener
     return () => {
       if (heading) {
-        heading.removeEventListener('mouseover', animateText);
+        heading.removeEventListener(animateText);
       }
       clearInterval(interval);
     };
@@ -52,36 +81,19 @@ function Hero() {
 
   return (
     <div className="hero-container">
-      <div className="animated-text">
-        <h1 ref={headingRef} data-value="WELCOME TO SHANA'S PORTFOLIO">CLICK HERE</h1>
+      <div className="tilt-container" ref={tiltRef}>
+        <div className="tilt-background" style={{ backgroundImage: `url(${heroImage})` }}></div>
       </div>
 
+      <img src={heroContainer} alt="hero-container" />
 
-      <div className="left-image">
-        <img src={leftImage} alt="Left"/>
-      </div>
-
-      <div className="right-image">
-        <img src={rightImage} alt="Right"/>
-      </div>
-
-      <div className="scroll" style={{ '--t': '20s' }}>
-        <div>
-          <span>SHANA</span>
-          <span>SHANA</span>
-          <span>SHANA</span>
-          <span>SHANA</span>
-          <span>SHANA</span>
+      <div className="content">
+        <div className="animated-text">
+          <h1 ref={headingRef} data-value="WELCOME TO SHANA'S PORTFOLIO">WELCOME TO SHANA'S PORTFOLIO</h1>
         </div>
       </div>
 
-      
-
     </div>
-
-    
-    
-    
   );
 }
 

@@ -1,7 +1,7 @@
 .about_container {
     display: flex;
     position: relative;
-    top: 30vw;
+    top: 9vw;
     width: 70vw;
     flex-wrap: nowrap;
     justify-content: space-around;
@@ -9,16 +9,16 @@
 }
 
 .me-section img {
-    width: 95vw;
+    width: 98vw;
     height: auto;
-    margin: 2vw;
+    margin: 1vw;
     transition: transform 0.3s ease;  /* Smooth transition for scaling */
 }
 
 .study-set {
     position: absolute;
-    top: 40%;
-    left: 28%;
+    top: 29%;
+    left: 23%;
     transform: translateX(-50%);
     width: 18vw;
     max-width: 50vw;
@@ -38,8 +38,8 @@
 
 .my-picture {
     position: absolute;
-    top: 46%;
-    left: 78%;
+    top: 49%;
+    left: 80%;
     transform: translateX(-50%);
     width: 17vw;
     max-width: 50vw;
@@ -59,10 +59,10 @@
 
 .van_image {
     position: absolute;
-    top: 15%;
-    right: -48.3%;
+    top: 9%;
+    right: -53.4%;
     transform: translateX(-50%);
-    width: 23vw;
+    width: 25vw;
     max-width: 50vw;
     z-index: 5;
 }
@@ -85,10 +85,10 @@
     max-width: 70%;
     height: 60px;
     z-index: 1000;
-    left: 76%;
-    top: 6.4%;
+    left: 67%;
+    top: 2.2%;
     transform: translateX(-50%);
-    font-size: calc(0.06vw + 1em);
+    font-size: calc(0.06vw + 0.65em);
     overflow: hidden;
     font-weight: bolder;
     -webkit-mask-image: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
@@ -124,8 +124,8 @@
 
 .animated-intro {
     position:absolute;
-    top: 40vw; /* Adjust as needed to place text correctly above images */
-    left: 12vw;
+    top: 38.3vw; /* Adjust as needed to place text correctly above images */
+    left: 7.8vw;
     z-index: 10; /* Ensures text appears above images */
     width: 470px;
   }
