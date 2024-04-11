@@ -65,7 +65,6 @@
   }
 }
 
-/* Styles for scrolling text */
 .scroll {
   position: absolute;
   display: flex;
@@ -147,3 +146,5 @@
     transform: translateX(0);
   }
 }
+
+

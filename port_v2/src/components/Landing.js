@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Hero from './Hero'; 
 import Boxes from './Boxes'; 
 import Render from './Render';
+import MyInfo from './my_info';
 
 // Define the Landing component as a functional component
 const Landing = () => {
@@ -15,9 +16,15 @@ const Landing = () => {
       {/* Include the Hero component */}
       <Hero />
 
+      {}
+      <MyInfo />
+
 
       {/* Assuming Boxes component handles displaying multiple boxes */}
       <Render />
+
+
+
     </div>
   );
 };

@@ -1,21 +1,21 @@
 /* App.css */
 body, h1, h2, h3, p, ul, li, a {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-  }
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
   
-  .App {
-    font-family: 'Arial', sans-serif;
-  }
+}
+
+.App {
+  font-family: 'Arial', sans-serif;
+}
 
 
 body {
-  background: linear-gradient(0.25turn, #e8e8e8, #ffffff, #dad9d9);
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  /* E5E5E5 - first one, #EEEDF2 - last one*/
+background: linear-gradient(0.25turn, #e8e8e8, #ffffff, #ededed);
+width: 100%;
+height: 100%;
+overflow-x: hidden;
+/* E5E5E5 - first one, #EEEDF2 - last one*/
 }
-  

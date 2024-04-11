@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { RiArrowRightSLine } from 'react-icons/ri'; 
 
-const Boxes = ({ image, title }) => {
+const Boxes = ({ image, tag_image, title, box, githubLink }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const cardStyle = {
     borderRadius: '15px',
     overflow: 'hidden',
-    marginTop: '15px',
-    width: isHovered ? '23%' : '18%',
+    marginTop: '0px',
+    marginBottom: '150px',
+    width: isHovered ? '25%' : '17%',
     transition: 'all 0.3s ease-in-out',
     height: '450px',
     position: 'relative', 
@@ -65,9 +66,11 @@ const Boxes = ({ image, title }) => {
   };
 
   const buttonStyle = {
-    marginTop: '0.5rem',
-    backgroundColor: isHovered ? 'yellow' : 'white',
-    color: isHovered ? 'black' : 'blue', // Assuming default button text color
+    marginTop: '0.7rem',
+    fontSize: '10px',
+    fontFamily: 'monospace',
+    backgroundColor: isHovered ? 'rgba(255, 255, 255, 0.85)' : 'rgba(255, 255, 255, 0.51)',
+    color: isHovered ? 'black' : 'white', // Assuming default button text color
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -75,6 +78,7 @@ const Boxes = ({ image, title }) => {
     cursor: 'pointer',
     padding: '0.5rem 1rem',
     borderRadius: '50px',
+    textDecoration: 'none'
   };
 
   return (
@@ -85,7 +89,7 @@ const Boxes = ({ image, title }) => {
     >
       <div style={overlayStyle}></div>
       <div style={topOverlayStyle}></div>
-      <img src="/images/yeelowtags.png" alt="" style={imageTagStyle} />
+      <img src={tag_image} alt="tag image" width="55%" style={imageTagStyle} />
       <div style={contentBoxStyle}>
         <img
           src={image}
@@ -98,14 +102,16 @@ const Boxes = ({ image, title }) => {
           }}
         />
         <div style={textStyle}>
-          <h2 style={{ fontSize: '20px', lineHeight: '1em', marginBottom: '1rem' }}>{title}</h2>
-          <p style={{ margin: '0 0 0.5rem 0' }}>
-            box
+          <h2 style={{ fontSize: '25px', lineHeight: '1em', marginBottom: '1rem', fontFamily: 'monospace' }}>{title}</h2>
+          <p style={{ margin: '0 0 0.5rem 0', fontSize: '12px', marginBottom: '1rem' }}>
+            {box}
           </p>
+          <a href={githubLink} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
           <button style={buttonStyle}>
-            Get Started
-            <RiArrowRightSLine style={{ width: '20px', height: '20px', marginLeft: '0.5rem' }} />
+            GITHUB
+            <RiArrowRightSLine style={{ width: '20px', height: '18px', marginLeft: '0.1rem' }} />
           </button>
+        </a>
         </div>
       </div>
     </div>
