@@ -39,7 +39,7 @@
 
 .content {
   position: absolute;
-  top: 50%;
+  top: 76%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10; /* This ensures the content is above all backgrounds */
@@ -48,9 +48,14 @@
   text-align: center;
 }
 
-.animated-text h1 {
-  font-size: 2rem;
+.animated-hero h1 {
+  text-align: end;
+  margin-right: 4vh;
+  font-size: 6rem;
   color: white;
+  font-weight: 900;
   cursor: pointer;
   user-select: none; /* Prevents text selection */
 }
+
+

@@ -21,7 +21,7 @@ function Hero() {
         const rect = tilt.getBoundingClientRect();
         const x = e.clientX - rect.left - (rect.width / 2);
         const y = e.clientY - rect.top - (rect.height / 2);
-        const multiplier = 0.05; // Controls the tilt sensitivity
+        const multiplier = 0.07; // Controls the tilt sensitivity
 
         const xRotate = (y / rect.height) * multiplier * 180;
         const yRotate = -(x / rect.width) * multiplier * 180;
@@ -88,8 +88,10 @@ function Hero() {
       <img src={heroContainer} alt="hero-container" />
 
       <div className="content">
-        <div className="animated-text">
-          <h1 ref={headingRef} data-value="WELCOME TO SHANA'S PORTFOLIO">WELCOME TO SHANA'S PORTFOLIO</h1>
+        <div className="animated-hero">
+          <h1>WELCOME </h1>
+          <h1>TO</h1>
+          <h1 ref={headingRef} data-value="SHANA'S PORTFOLIO">MY PORTFOLIO</h1>
         </div>
       </div>
 
