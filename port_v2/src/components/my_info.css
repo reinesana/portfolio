@@ -1,23 +1,42 @@
+@font-face {
+    font-family: anta;
+    src: url('./fonts/anta/Anta/Anta-Regular.ttf');
+  }
+
+@font-face {
+    font-family: vg5000;
+    src: url('./fonts/Inter/Inter-VariableFont_slnt\,wght.ttf');
+}
+
 .about_container {
     display: flex;
     position: relative;
-    top: 9vw;
+    top: 3.8vw;
     width: 70vw;
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
 }
 
-.me-section img {
-    width: 98vw;
-    height: auto;
-    margin: 1vw;
-    transition: transform 0.3s ease;  /* Smooth transition for scaling */
-}
+
+.me-section {
+    background-image: url('./images/projects_container.png');
+    background-size: cover;
+    background-position: center;
+    top: 1.3vh;
+    margin-right: 1.8vw;
+    display: flex;
+    position: relative;
+    width: 99%;
+    margin-left: 1.5vh;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
 
 .study-set {
     position: absolute;
-    top: 29%;
+    top: 30%;
     left: 23%;
     transform: translateX(-50%);
     width: 18vw;
@@ -60,7 +79,7 @@
 .van_image {
     position: absolute;
     top: 9%;
-    right: -53.4%;
+    right: -56%;
     transform: translateX(-50%);
     width: 25vw;
     max-width: 50vw;
@@ -85,8 +104,8 @@
     max-width: 70%;
     height: 60px;
     z-index: 1000;
-    left: 67%;
-    top: 2.2%;
+    left: 69%;
+    top: 1.6%;
     transform: translateX(-50%);
     font-size: calc(0.06vw + 0.65em);
     overflow: hidden;
@@ -117,6 +136,7 @@
     padding: 5px 1px;
     border-radius: 5px;
     transition: 0.5s;
+    font-family: anta;
 }
 
 
@@ -124,21 +144,21 @@
 
 .animated-intro {
     position:absolute;
-    top: 38.3vw; /* Adjust as needed to place text correctly above images */
+    top: 40.5vw; /* Adjust as needed to place text correctly above images */
     left: 7.8vw;
     z-index: 10; /* Ensures text appears above images */
-    width: 470px;
+    width: 525px;
   }
   
   .animated-intro h1 {
-    font-family: monospace;
-    letter-spacing: normal;  /* Normalized letter spacing */
-    word-spacing: normal;    /* Normalized word spacing */
+    font-family: vg5000;
+    letter-spacing: 1px;  /* Normalized letter spacing */
+    word-spacing:1px;    /* Normalized word spacing */
     font-weight: 200;
-    font-size: 13px;
+    font-size: 12px;
     color: rgb(168, 168, 168);
     padding: 0.5rem;
-    margin: 0 auto; 
+    margin: 0 ato; 
     transition: background-color 0.5s, color 0.5s;
   }
   

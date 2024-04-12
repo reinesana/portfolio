@@ -85,13 +85,13 @@ function Hero() {
         <div className="tilt-background" style={{ backgroundImage: `url(${heroImage})` }}></div>
       </div>
 
-      <img src={heroContainer} alt="hero-container" />
+      <img src={heroContainer} alt="hero-box" />
 
       <div className="content">
         <div className="animated-hero">
-          <h1>WELCOME </h1>
-          <h1>TO</h1>
-          <h1 ref={headingRef} data-value="SHANA'S PORTFOLIO">MY PORTFOLIO</h1>
+          <h1>SHANA</h1>
+          <h3>NURSOO</h3>
+          <h2 ref={headingRef} data-value="PORTFOLIO.">HOVER HERE</h2>
         </div>
       </div>
 

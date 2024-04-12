@@ -1,3 +1,8 @@
+@font-face {
+  font-family: bento;
+  src: url('./fonts/Konkhmer.ttf');
+}
+
 
 
 .tilt-container {
@@ -5,7 +10,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  pointer-events: auto; /* This allows the mouse events for tilting */
+  pointer-events: auto; /* Allows mouse events for tilting */
 }
 
 .tilt-background {
@@ -14,7 +19,8 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-  transition: transform 0.2s ease-out; /* Smooth transition for the transform */
+  transition: transform 0.2s ease-out; /* Smooth transition for transform */
+  pointer-events: none; /* Prevents text interaction from blocking background tilting */
 }
 
 .hero-container {
@@ -28,34 +34,70 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: 1vh;
+  transform: translate(-50%, -50%); /* Centers the image */
   width: auto; /* Adjust width to maintain aspect ratio */
   max-width: 100%; /* Limits image width to prevent overflow */
   max-height: 100%; /* Limits image height to prevent overflow */
-  transform: translate(-50%, -50%); /* Centers the image */
-  pointer-events: none; /* Ensures that the tilting effect is not blocked */
+  pointer-events: none; /* Ensures tilting effect is not blocked by the image */
 }
-
 
 .content {
   position: absolute;
   top: 76%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10; /* This ensures the content is above all backgrounds */
-  pointer-events: auto; /* This allows interaction with the content */
+  z-index: 10; /* Ensures content is above all backgrounds */
+  pointer-events: auto; /* Allows interaction with the content */
   width: 100%;
   text-align: center;
 }
 
-.animated-hero h1 {
-  text-align: end;
-  margin-right: 4vh;
-  font-size: 6rem;
-  color: white;
-  font-weight: 900;
-  cursor: pointer;
-  user-select: none; /* Prevents text selection */
+.animated-hero {
+  margin-right: 0vh;
+  margin-top: 19vh;
+  pointer-events: none; /* Ensures hero text does not interfere with tilting */
 }
 
+.animated-hero h1, .animated-hero h2, .animated-hero h3 {
+  text-align: end;
+  font-family: bento;
+  font-size: 9rem;
+  font-weight: 900;
+
+  cursor: pointer;
+  user-select: none; /* Prevents text selection */
+  position: relative;
+  pointer-events: auto; /* Allows hover effects on the text */
+}
+
+.animated-hero h1 {
+  color: rgb(255, 255, 255); /* Semi-transparent white */
+  top: 2vh;
+  left: -43.8vh;
+  margin-left: 100vh;
+
+
+
+}
+
+.animated-hero h2 {
+  color: rgba(155, 203, 248, 0.396); /* Light blue with transparency */
+  top: -30vh;
+  left: -22vh;
+  
+
+  
+}
+
+.animated-hero h2:hover {
+  font-size: 9rem;
+  color: white; /* White color on hover */
+}
+
+.animated-hero h3 {
+  color: rgb(255, 255, 255); /* Solid white */
+  left: -6vh;
+  top: -14vh;
+ 
+}
 

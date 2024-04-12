@@ -1,59 +1,175 @@
+/* Container for the entire projects and contact sections */
+@font-face {
+  font-family: anta;
+  src: url(./fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
 
-
-.proj-container {
-  background-image: url('./images/projects_container.png');
-  background-size: cover;
-  background-position: center;
-  top: 30vh;
-  margin-right: 1.5vw;
+.projects_container {
   display: flex;
-  position: relative;
-  width: 100%;
-  margin-left: 1.7vh;
-  flex-wrap: nowrap;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
+  width: 100%;
+  margin: 2vh;
+  padding-top: 2vh;
+
+}
+
+.box-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 2vh;
+  top: 20vh;
+  left: 10vh;
+
+}
+
+/* Specific styling for the contact section image container */
+.contact_container {
+  width: 100%;  /* Takes the full width of its parent container */
+  display: flex;  /* Uses flexbox to center the image */
+  position:relative;
+  justify-content: center;  /* Centers the child horizontally */
+  align-items: center;  /* Centers the child vertically */
+  padding: 0;  /* Top and bottom padding */
+  top: 0vh; 
+  
+}
+
+.contact-section {
+  width: 70%;  /* Responsive width */
+  height: auto;  /* Height adjusted automatically */
+  top: -25vh;
+  left: -13.5vh;
+  position: relative;
 }
 
 
-/* Individual Boxes styling for background images which isn't specified but assumed from context */
-.box-container {
-  position: relative; /* Relative positioning to hold the boxes */
+.animated-projects {
+  position:relative;
+  top: -143vh;
+  left: 37vw;
+  z-index: 10; /* Ensures text appears above images */
+  width: 240px;
+  text-align: end;
+}
+
+.animated-projects h1 {
+  font-family: vg5000;
+  letter-spacing: 1px;  /* Normalized letter spacing */
+  word-spacing:1px;    /* Normalized word spacing */
+  font-weight: 200;
+  font-size: 11px;
+  color: rgb(113, 113, 113);
+  margin: 0 auto; 
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.animated-projects h1:hover {
+  color: rgb(20, 20, 20);
+  cursor: pointer;
 }
 
 
-  
-  .animated-projects span {
-    display: inline-flex;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: rgba(16, 15, 15, 0.688);
-    padding: 5px 1px;
-    border-radius: 5px;
-    transition: 0.5s;
-  }
 
 
-  .animated-projects {
-    position: absolute;
-    display: flex;
-    width: 20vw;
-    max-width: 100%;
-    height: 120px;
-    z-index: 1000;
-    left: 91%;
-    transform: translateX(-50%);
-    font-size: calc(3vw + 1em);
-    font-weight: bolder;
-    text-align: right;
-    top: 5vw; /* Adjust as needed to place text correctly above images */
-    right: -7.5vw;
-    z-index: 10; /* Ensures text appears above images */
-    margin-right: 2vw;
+.contact {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 1.3rem;
+  position: relative; /* Fixed at the top */
+  width: 100%;
+  z-index: 1000; /* Ensures navbar stays on top of other content */
+
+}
+
+.contact-container {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* Center the navigation menu */
+}
+
+.contact-menu {
+  list-style: none;
+  display: flex;
+}
+
+.contact-item {
+  display: flex;
+}
+
+.contact-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white; /* Icon color */
+}
+
+.contact-links img {
+  width: 60%;
+  transition: transform 0.2s ease-in-out; /* Smooth scaling on hover */
+}
+
+.contact-links:hover img,
+.contact-links:focus img {
+  transform: scale(1.1); /* Slightly enlarge icons on hover/focus */
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    justify-content: space-around; /* Adjust spacing on smaller screens */
   }
-  
-  .animated-projects span:hover {
-    color: rgb(14, 13, 13); /* Brighter color on hover for better visibility */
-    cursor: pointer; /* Indicates that the item is clickable */
+
+  .contact-links img {
+    width: 25px; /* Slightly smaller icons on smaller screens */
+    height: 25px;
   }
+}
+
+
+.contact-linkedin {
+  width: auto;  /* Increased width to 150 pixels */
+  height: 37px;  /* New fixed height, change as necessary */
+  display: flex;
+  justify-content: flex-start;
   
+  position: relative;
+  padding: 0;
+  margin: 0;
+  left: -64vh;
+  top: -95vh;
+
+}
+
+.contact-linkedin:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+  
+}
+
+.outro {
+
+  width: 200%;
+  position: relative;
+  display:flex;
+  text-align: end;
+ 
+  left: 60vh;
+  top: -95vh;
+}
+
+
+
+
+
+
+
+.outro h1 {
+  color: rgba(40, 40, 40, 0.882);
+  font-size: 19px;
+  font-family: anta;
+}
