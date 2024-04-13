@@ -1,7 +1,7 @@
 /* Container for the entire projects and contact sections */
 @font-face {
   font-family: anta;
-  src: url(./fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+  src: url(./fonts/anta/Anta/Anta-Regular.ttf);
 }
 
 .projects_container {
@@ -25,25 +25,7 @@
 
 }
 
-/* Specific styling for the contact section image container */
-.contact_container {
-  width: 100%;  /* Takes the full width of its parent container */
-  display: flex;  /* Uses flexbox to center the image */
-  position:relative;
-  justify-content: center;  /* Centers the child horizontally */
-  align-items: center;  /* Centers the child vertically */
-  padding: 0;  /* Top and bottom padding */
-  top: 0vh; 
-  
-}
 
-.contact-section {
-  width: 70%;  /* Responsive width */
-  height: auto;  /* Height adjusted automatically */
-  top: -25vh;
-  left: -13.5vh;
-  position: relative;
-}
 
 
 .animated-projects {
@@ -74,61 +56,41 @@
 
 
 
-.contact {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 1.3rem;
-  position: relative; /* Fixed at the top */
-  width: 100%;
-  z-index: 1000; /* Ensures navbar stays on top of other content */
 
-}
 
 .contact-container {
-  max-width: 90%;
-  margin: 0 auto;
   display: flex;
   justify-content: center; /* Center the navigation menu */
 }
 
-.contact-menu {
-  list-style: none;
-  display: flex;
+
+.contact {
+  display: flex;       /* Ensures flexbox layout */
+  justify-content: flex-start; /* Aligns children to the start */
+  position: relative;  /* Standard positioning to manipulate inside elements */
+  left: -35vh;             /* Resets any previously set horizontal movement */
+  top: -83vh;
 }
 
-.contact-item {
-  display: flex;
+
+
+.contact-devpost img {
+  margin: 1vh;
+  width: 114px;  /* Example width; adjust as necessary */
+  height: auto; /* Example height; ensure it matches the width or as desired */
+  transition: transform 0.3s ease; /* Smooth transform on hover (scaling) */
+  position: relative;
 }
 
-.contact-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: white; /* Icon color */
+.contact-email img {
+  margin: 1vh;
+  width: 125px; 
+  height: auto;
+  transition: transform 0.3s ease; 
+  position: relative;
 }
 
-.contact-links img {
-  width: 60%;
-  transition: transform 0.2s ease-in-out; /* Smooth scaling on hover */
-}
 
-.contact-links:hover img,
-.contact-links:focus img {
-  transform: scale(1.1); /* Slightly enlarge icons on hover/focus */
-}
-
-/* Responsive Navbar */
-@media screen and (max-width: 768px) {
-  .contact-container {
-    justify-content: space-around; /* Adjust spacing on smaller screens */
-  }
-
-  .contact-links img {
-    width: 25px; /* Slightly smaller icons on smaller screens */
-    height: 25px;
-  }
-}
 
 
 .contact-linkedin {
@@ -140,7 +102,7 @@
   position: relative;
   padding: 0;
   margin: 0;
-  left: -64vh;
+  left: -78vh;
   top: -95vh;
 
 }
@@ -151,14 +113,24 @@
   
 }
 
-.outro {
+.contact-devpost:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+  
+}
 
-  width: 200%;
+.contact-email:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+  
+}
+
+.outro {
+  width: 600px;
   position: relative;
   display:flex;
   text-align: end;
- 
-  left: 60vh;
+  left: 34vh;
   top: -95vh;
 }
 
@@ -169,7 +141,10 @@
 
 
 .outro h1 {
-  color: rgba(40, 40, 40, 0.882);
+  color: rgba(71, 71, 71, 0.882);
   font-size: 19px;
   font-family: anta;
 }
+
+
+

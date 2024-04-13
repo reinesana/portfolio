@@ -12,7 +12,6 @@ import projectContainer from './images/projects_container.png';
 import contact from './images/contact.png';
 import linkedin from './images/linkedin.png';
 import devpost from './images/devpost.png';
-import github from './images/github.png';
 import email from './images/email.png';
 
 const BoxesContainer = () => {
@@ -106,28 +105,27 @@ const BoxesContainer = () => {
         <div className="outro">
         <h1>Want a closer look at Shana's projects? Check out her accomplishments on devpost or feel free to connect with her on Linkedin.</h1>
         </div>
-         <a href="" className="contact-linkedin"><img src={linkedin}/></a>
-         <a href="" className="contact-email"><img src={email}/></a>
+        
+
+         <a href="https://www.linkedin.com/in/shana-nursoo-363826189/" className="contact-linkedin"><img src={linkedin}/></a>
+         
 
 
 
-        <nav className="contact">
-            <ul className="contact-menu">
-            <li className="contact-item">
-                <a href="" className="contact-links"><img src={devpost}/></a>
-            </li>
-            <li className="contact-item">
-                <a href="" className="contact-links"><img src={github}/></a>
-            </li>
-            </ul>
-   
-        </nav>
+        <div className="contact">
+        <a href="https://devpost.com/17shana2017?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" className="contact-devpost"><img src={devpost}/></a>
+        <a href="mailto:shana_nursoo@sfu.ca" className="contact-email"><img src={email}/></a>
+
         </div>
+
+   
+   
         
          
                 
  
 
+    </div>
     </div>
 
 

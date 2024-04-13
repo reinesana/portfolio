@@ -1,9 +1,10 @@
 import React from 'react';
 import './Navbar.css';
-import home from '/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/src/components/images/home_icon.png';
-import about from '/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/src/components/images/about_icon.png';
-import projects from '/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/src/components/images/projects_icon.png';
-import experience from '/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/src/components/images/experience_icon.png';
+import homeIcon from '/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/src/components/images/home_icon.png';
+import aboutIcon from '/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/src/components/images/about_icon.png';
+import projectsIcon from '/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/src/components/images/projects_icon.png';
+import experienceIcon from '/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/src/components/images/experience_icon.png';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
   return (
@@ -11,16 +12,24 @@ function Navbar() {
       <div className="nav-container">
         <ul className="nav-menu">
           <li className="nav-item">
-            <a href="#home" className="nav-links"><img src={home}/></a>
+            <NavLink to="/home" className={({ isActive }) => isActive ? "nav-links active" : "nav-links"}>
+              <img src={homeIcon} alt="Home"/>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a href="#about" className="nav-links"><img src={about}/></a>
+            <NavLink to="/about" className={({ isActive }) => isActive ? "nav-links active" : "nav-links"}>
+              <img src={aboutIcon} alt="About"/>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a href="#projects" className="nav-links"><img src={projects}/></a>
+            <NavLink to="/projects" className={({ isActive }) => isActive ? "nav-links active" : "nav-links"}>
+              <img src={projectsIcon} alt="Projects"/>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a href="#experience" className="nav-links"><img src={experience}/></a>
+            <NavLink to="/experience" className={({ isActive }) => isActive ? "nav-links active" : "nav-links"}>
+              <img src={experienceIcon} alt="Experience"/>
+            </NavLink>
           </li>
         </ul>
       </div>
