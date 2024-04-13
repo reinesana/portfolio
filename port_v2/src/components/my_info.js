@@ -67,7 +67,9 @@ function MyInfo() {
     return (
         <div className="about_container">
             <div className="me-section">
+                <div className="aboutme_lines">
                 <img src={aboutMeLines} alt="about-me" />
+                </div>
                 <div className="study-set">
                     <img src={studySetup} alt="Study Setup" />
                 </div>

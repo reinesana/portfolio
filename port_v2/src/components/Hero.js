@@ -1,38 +1,33 @@
 import React, { useEffect, useRef } from 'react';
 import './Hero.css'; 
-import heroImage from '/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/src/components/images/hero_image.png';
-import heroContainer from '/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/src/components/images/hero_container.png';
-
+import heroImage from './images/hero_image.png'; // Adjust the path as necessary
+import heroContainer from './images/hero_container.png'; // Adjust the path as necessary
 
 function Hero() {
-  const tiltRef = useRef(null); // Ref for the tilt background
-  const headingRef = useRef(null); // Ref for the animated text
-
-  const tiltMove = (x, y) => {
-    const boundedX = Math.max(Math.min(x, 10), -10); // Limit the maximum tilt angles to 10 degrees
-    const boundedY = Math.max(Math.min(y, 10), -10);
-    return `perspective(1000px) rotateX(${boundedX}deg) rotateY(${boundedY}deg) scale(1.1)`;
-  };
+  const tiltRef = useRef(null);
+  const headingRef = useRef(null);
 
   useEffect(() => {
     const tilt = tiltRef.current;
     if (tilt) {
       const handleMouseMove = (e) => {
         const rect = tilt.getBoundingClientRect();
-        const x = e.clientX - rect.left - (rect.width / 2);
-        const y = e.clientY - rect.top - (rect.height / 2);
-        const multiplier = 0.07; // Controls the tilt sensitivity
+        const x = (e.clientX || e.touches[0].clientX) - rect.left - (rect.width / 2);
+        const y = (e.clientY || e.touches[0].clientY) - rect.top - (rect.height / 2);
+        const multiplier = 0.07;
 
         const xRotate = (y / rect.height) * multiplier * 180;
         const yRotate = -(x / rect.width) * multiplier * 180;
 
-        tilt.style.transform = tiltMove(xRotate, yRotate);
+        tilt.style.transform = `perspective(1000px) rotateX(${xRotate}deg) rotateY(${yRotate}deg) scale(1.1)`;
       };
 
       tilt.addEventListener('mousemove', handleMouseMove);
+      tilt.addEventListener('touchmove', handleMouseMove);
 
       return () => {
         tilt.removeEventListener('mousemove', handleMouseMove);
+        tilt.removeEventListener('touchmove', handleMouseMove);
       };
     }
   }, []);
@@ -69,11 +64,13 @@ function Hero() {
     const heading = headingRef.current;
     if (heading) {
       heading.addEventListener('mouseover', animateText);
+      heading.addEventListener('touchstart', animateText);
     }
 
     return () => {
       if (heading) {
-        heading.removeEventListener(animateText);
+        heading.removeEventListener('mouseover', animateText);
+        heading.removeEventListener('touchstart', animateText);
       }
       clearInterval(interval);
     };
@@ -87,9 +84,8 @@ function Hero() {
 
       <img src={heroContainer} alt="hero-box" />
       <div className="hero-text">
-        <h1>Welcome to Shana's interactive, 3D portfolio. Hover around to interact with the background and the text. Happy viweing 💫</h1>
-        </div>
-      
+        <h1>Welcome to Shana's interactive, 3D portfolio. Hover around to interact with the pictures and the text to enhance your experience. Happy viewing 💫</h1>
+      </div>
 
       <div className="content">
         <div className="animated-hero">

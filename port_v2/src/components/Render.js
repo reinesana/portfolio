@@ -81,7 +81,9 @@ const BoxesContainer = () => {
   return (
     
     <div className="projects_container">
+        <div className="project_lines">
         <img src={projectContainer} className="proj-container"></img>
+        </div>
         
         
 
