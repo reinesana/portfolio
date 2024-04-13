@@ -105,9 +105,8 @@
   align-items: center; /* Vertically center the text within the container */
   justify-content: flex-start; /* Aligns text to the left */
   text-align: left;
-  top: 15vh;
-  left: 15%;
- 
+  top: 16vh;
+  left: 16%;
   transform: translateX(-50%); /* Adjust this value to move more to the right on smaller screens */
   font-family: 'vg5000', sans-serif;
   letter-spacing: 1px;  /* Normalized letter spacing */
@@ -115,11 +114,13 @@
   font-weight: 200;
   font-size: calc(1.5rem + 1vw); /* Responsive base size plus a dynamic component */
   color: rgba(255, 255, 255, 0.838);
+ 
   transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
 }
 
 .hero-text h1 {
   font-family: vg5000;
+
   letter-spacing: 1px;  /* Normalized letter spacing */
   word-spacing:1px;    /* Normalized word spacing */
   font-weight: 200;
