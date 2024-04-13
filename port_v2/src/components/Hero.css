@@ -3,8 +3,6 @@
   src: url('./fonts/Konkhmer.ttf');
 }
 
-
-
 .tilt-container {
   position: absolute;
   width: 100%;
@@ -75,18 +73,12 @@
   top: 2vh;
   left: -43.8vh;
   margin-left: 100vh;
-
-
-
 }
 
 .animated-hero h2 {
   color: rgba(155, 203, 248, 0.396); /* Light blue with transparency */
   top: -30vh;
   left: -22vh;
-  
-
-  
 }
 
 .animated-hero h2:hover {
@@ -100,4 +92,27 @@
   top: -14vh;
  
 }
+
+
+.hero-text {
+  width: 220px;
+  position: relative;
+  display:flex;
+  text-align: start;
+  top: 15vh;
+  left: 11.5vh;
+}
+
+
+.hero-text h1 {
+  font-family: vg5000;
+  letter-spacing: 1px;  /* Normalized letter spacing */
+  word-spacing:1px;    /* Normalized word spacing */
+  font-weight: 200;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.838);
+  margin: 0 auto; 
+  transition: background-color 0.5s, color 0.5s;
+}
+
 

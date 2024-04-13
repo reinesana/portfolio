@@ -1,56 +1,64 @@
 /* Navbar.css */
 .navbar {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-top: 1.3rem;
-    position: fixed; /* Fixed at the top */
-    width: 100%;
-    z-index: 1000; /* Ensures navbar stays on top of other content */
-  }
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 1.5rem;
+  position: fixed; /* Fixed at the top */
+  width: 100%;
+  z-index: 1000; 
   
+}
+
+.nav-container {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.nav-item {
+  margin:0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white; /* Icon color */
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.nav-links img {
+  width: 60%;
+  transition: transform 0.2s ease-in-out; /* Smooth scaling on hover */
+}
+
+.nav-links:hover img {
+  transform: scale(1.1); /* Slightly enlarge icons on hover/focus */
+}
+
+@media (max-width: 768px) {
   .nav-container {
-    max-width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center; /* Center the navigation menu */
+      flex-direction: column; /* Stack nav items under each other in narrow views */
   }
-  
   .nav-menu {
-    list-style: none;
-    display: flex;
+      flex-direction: column; /* Vertical menu for narrow screens */
+      align-items: center; /* Center align the menu items */
   }
-  
-  .nav-item {
-    display: flex;
-  }
-  
   .nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white; /* Icon color */
+      width: 100%; /* Full width links on small screens */
+      text-align: center; /* Center text */
   }
-  
-  .nav-links img {
-    width: 60%;
-    transition: transform 0.2s ease-in-out; /* Smooth scaling on hover */
-  }
-  
-  .nav-links:hover img,
-  .nav-links:focus img {
-    transform: scale(1.1); /* Slightly enlarge icons on hover/focus */
-  }
-  
-  /* Responsive Navbar */
-  @media screen and (max-width: 768px) {
-    .nav-container {
-      justify-content: space-around; /* Adjust spacing on smaller screens */
-    }
-  
-    .nav-links img {
-      width: 25px; /* Slightly smaller icons on smaller screens */
-      height: 25px;
-    }
-  }
-  
+}
+
+

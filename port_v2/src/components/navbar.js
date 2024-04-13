@@ -1,40 +1,48 @@
 import React from 'react';
 import './Navbar.css';
-import homeIcon from '/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/src/components/images/home_icon.png';
-import aboutIcon from '/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/src/components/images/about_icon.png';
-import projectsIcon from '/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/src/components/images/projects_icon.png';
-import experienceIcon from '/Users/shanakesia/Desktop/CMPT/projects/portfolio/port_v2/src/components/images/experience_icon.png';
-import { NavLink } from 'react-router-dom';
+import homeIcon from './images/home_icon.png';
+import aboutIcon from './images/about_icon.png';
+import projectsIcon from './images/projects_icon.png';
+import experienceIcon from './images/experience_icon.png';
+import resumePDF from './pdf/Shana_K_Resume.pdf';
+
 
 function Navbar() {
-  return (
-    <nav className="navbar">
-      <div className="nav-container">
-        <ul className="nav-menu">
-          <li className="nav-item">
-            <NavLink to="/home" className={({ isActive }) => isActive ? "nav-links active" : "nav-links"}>
-              <img src={homeIcon} alt="Home"/>
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink to="/about" className={({ isActive }) => isActive ? "nav-links active" : "nav-links"}>
-              <img src={aboutIcon} alt="About"/>
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink to="/projects" className={({ isActive }) => isActive ? "nav-links active" : "nav-links"}>
-              <img src={projectsIcon} alt="Projects"/>
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink to="/experience" className={({ isActive }) => isActive ? "nav-links active" : "nav-links"}>
-              <img src={experienceIcon} alt="Experience"/>
-            </NavLink>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  );
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    return (
+        <nav className="navbar">
+            <ul className="nav-menu">
+                <li className="nav-item">
+                    <a onClick={() => scrollToSection('hero-section')} className="nav-links">
+                        <img src={homeIcon} alt="Home" />
+                    </a>
+                </li>
+                <li className="nav-item">
+                    <a onClick={() => scrollToSection('about-section')} className="nav-links">
+                        <img src={aboutIcon} alt="About" />
+                    </a>
+                </li>
+                <li className="nav-item">
+                    <a onClick={() => scrollToSection('projects-section')} className="nav-links">
+                        <img src={projectsIcon} alt="Projects" />
+                    </a>
+                </li>
+                <li className="nav-item">
+                  <a href={resumePDF} target="_blank" rel="noopener noreferrer" className="nav-links">
+                    <img src={experienceIcon} alt="Experience" />
+                  </a>
+                </li>
+
+
+            </ul>
+        </nav>
+    );
 }
 
 export default Navbar;

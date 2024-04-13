@@ -68,7 +68,7 @@
   display: flex;       /* Ensures flexbox layout */
   justify-content: flex-start; /* Aligns children to the start */
   position: relative;  /* Standard positioning to manipulate inside elements */
-  left: -35vh;             /* Resets any previously set horizontal movement */
+  left: -33vh;             /* Resets any previously set horizontal movement */
   top: -83vh;
 }
 
@@ -76,7 +76,7 @@
 
 .contact-devpost img {
   margin: 1vh;
-  width: 114px;  /* Example width; adjust as necessary */
+  width: 113px;  /* Example width; adjust as necessary */
   height: auto; /* Example height; ensure it matches the width or as desired */
   transition: transform 0.3s ease; /* Smooth transform on hover (scaling) */
   position: relative;
@@ -84,7 +84,7 @@
 
 .contact-email img {
   margin: 1vh;
-  width: 125px; 
+  width: 120px; 
   height: auto;
   transition: transform 0.3s ease; 
   position: relative;

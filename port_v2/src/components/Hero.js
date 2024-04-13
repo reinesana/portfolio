@@ -86,6 +86,10 @@ function Hero() {
       </div>
 
       <img src={heroContainer} alt="hero-box" />
+      <div className="hero-text">
+        <h1>Welcome to Shana's interactive, 3D portfolio. Hover around to interact with the background and the text. Happy viweing 💫</h1>
+        </div>
+      
 
       <div className="content">
         <div className="animated-hero">

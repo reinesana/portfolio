@@ -6,19 +6,22 @@ import Projects from './components/Render';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 
+
 function App() {
   return (
-    <>
+    <div>
       <Navbar />
-      <Routes>
-        <Route path="/home" element={<Landing />} />
-        <Route path="/about" element={<MyInfo />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/experience" element={<MyInfo />} />
-      </Routes>
-      </>
+      <div id="home-section">
+        <Landing />
+      </div>
+      <div id="about-section">
+        <MyInfo />
+      </div>
+      <div id="projects-section">
+        <Projects />
+      </div>
+    </div>
   );
 }
 
 export default App;
-

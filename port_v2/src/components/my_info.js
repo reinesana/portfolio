@@ -80,20 +80,22 @@ function MyInfo() {
             </div>
             <div className="me_scroll" style={{ '--t': '20s' }}>
                 <div>
-                    <span>SOFTWARE</span>
-                    <span>ENGINEER</span>
-                    <span>MACHINE</span>
-                    <span>LEARNING</span>
-                    <span>ENTHUSIAST</span>
-                    <span>GAME</span>
-                    <span>DEVELOPER</span>
+                    <span>PYTHON</span>
+                    <span>C++</span>
+                    <span>AWS</span>
+                    <span>PostgreSQL</span>
+                    <span>NODE.JS</span>
+                    <span>REACT</span>
+                    <span>FLASK</span>
                 </div>
             </div>
             <div className="animated-intro">
-                <h1 ref={headingRef} data-value="Shana is a driven 2nd year Computing Science student at SFU passionate about software development and equity in STEM. She is a machine learning enthusiast with a strong foundation in machine learning algorithms and OOP with Python and C++. Aside from programming, Shana has a sound interest in music and the growth of women and disadvantageous groups in STEM 🔬. She is on a journey to build scalable and impactful technologies through innovative code for the betterment of society 🌎">
+                <h1 ref={headingRef} data-value="Shana is a driven 2nd year Computing Science student at SFU passionate about software development and equity in STEM. She is a machine learning enthusiast with a strong foundation in algorithms and OOP in Python and C++. Aside from programming, Shana has a sound interest in music and the growth of women and disadvantageous groups in STEM 🔬. She is on a journey to build scalable and impactful technologies through innovative code for the betterment of society 🌎">
                     CLICK HERE
                 </h1>
             </div>
+
+            
         </div>
     );
 }
