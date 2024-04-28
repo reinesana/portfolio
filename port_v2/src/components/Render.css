@@ -4,45 +4,54 @@
   src: url(./fonts/anta/Anta/Anta-Regular.ttf);
 }
 
+
 .projects_container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 2vh;
-  padding-top: 2vh;
-  
-
+  position: relative;
+  top: 0;  
+  width: 100%;  
+  flex-wrap: wrap;  
+  justify-content: space-around;  
+  align-items: center; 
+  margin-top: 2vh;  
 }
 
 .project_lines {
-    position: relative;
-    width: 100%; /* Use 100% of the container's width */
-    margin: 1.3vh; /* Vertically aligns at 1.3vh from the top, centered horizontally */
-    display: flex; /* Use flexbox to manage children */
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
-    overflow: hidden; /* Hide any part of the img that exceeds the bounds of its container */
+  position: relative;
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  overflow: hidden;  
+  padding: 0; 
 }
 
 .project_lines img {
-    width: 100%; /* Make the image width responsive to the container's width */
-    height: auto; /* Maintain the aspect ratio of the image */
-    transition: transform 0.3s ease; /* Smooth transition for transforms applied to the image */
+  margin-left: 10vh;
+  margin-top: 2vh;
+  width: 104%;  
+  height: auto;  
 }
+
+
+
+
 
 
 .box-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   width: 100%;
   margin-top: 2vh;
   margin-left: 2vh;
   margin-right: 2vh;
-  margin-bottom: 0;
-  top: 20vh;
-  left: 10vh;
+  margin-bottom: 0; 
+  position: absolute;
+  top: -50vw;
+  left: 2vw;
+  align-items: left;     /* Center-align items for better visual balance */
+  justify-content: left;
 
 }
 
@@ -50,12 +59,12 @@
 
 
 .animated-projects {
-  position:relative;
-  top: -143vh;
-  left: 37vw;
+  position:absolute;
   z-index: 10; /* Ensures text appears above images */
-  width: 240px;
+  width: calc(22vw - 5vw);
   text-align: end;
+  top: calc(7vw + 2vw);
+  right: calc(2vw + 1vw);
 }
 
 .animated-projects h1 {
@@ -63,7 +72,7 @@
   letter-spacing: 1px;  /* Normalized letter spacing */
   word-spacing:1px;    /* Normalized word spacing */
   font-weight: 200;
-  font-size: 11px;
+  font-size: calc(15px - 3px);
   color: rgb(113, 113, 113);
   margin: 0 auto; 
   transition: background-color 0.5s, color 0.5s;
@@ -84,6 +93,7 @@
   padding-bottom: 20px; 
   align-items: left;     /* Center-align items for better visual balance */
   justify-content: left;
+  position:absolute;
   
 }
 
@@ -91,9 +101,9 @@
 .contact {
   display: flex;       /* Ensures flexbox layout */
   justify-content: flex-start; /* Aligns children to the start */
-  position: relative;  /* Standard positioning to manipulate inside elements */
-  left: -33vh;             /* Resets any previously set horizontal movement */
-  top: -83vh;
+  position: relative;  
+  
+
 }
 
 
@@ -102,16 +112,20 @@
   margin: 1vh;
   width: 113px;  /* Example width; adjust as necessary */
   height: auto; /* Example height; ensure it matches the width or as desired */
-  transition: transform 0.3s ease; /* Smooth transform on hover (scaling) */
+ 
   position: relative;
+  top: 8vw;
+  right: 10vw;
 }
 
 .contact-email img {
   margin: 1vh;
   width: 120px; 
   height: auto;
+  top: 8vw;
   transition: transform 0.3s ease; 
   position: relative;
+  right: 10vw;
 }
 
 
@@ -122,12 +136,12 @@
   height: 37px;  /* New fixed height, change as necessary */
   display: flex;
   justify-content: flex-start;
-  
+  right: 44vw;
+  top: 2vw;
   position: relative;
   padding: 0;
   margin: 0;
-  left: -76vh;
-  top: -95vh;
+
 
 }
 
@@ -154,16 +168,15 @@
   position: relative;
   display:flex;
   text-align: flex-end;
-
-  left: 36vh;
-  top: -95vh;
+  left: 25vw;
+  top: 2vw;
   text-align: right;
 }
 
 
 .outro h1 {
   color: rgba(71, 71, 71, 0.882);
-  font-size: calc(1vw + 6px);
+  font-size: calc(1vw + 0.3vw);
   font-family: anta;
 }
 

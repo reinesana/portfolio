@@ -8,11 +8,10 @@ import MRI from './images/MRI_image.png';
 import RefugeeTag from './images/refugee_tag.png'; // Path to yellow tag image for refugee
 import UrbanTag from './images/urban_tag.png'; // Path to yellow tag image for urban
 import MachineTag from './images/ML_tag.png'; // Path to yellow tag image for machine
-import projectContainer from './images/projects_container.png';
-import contact from './images/contact.png';
-import linkedin from './images/linkedin.png';
-import devpost from './images/devpost.png';
-import email from './images/email.png';
+import projectContainer from './images/projects_container.svg';
+import linkedin from './images/linkedin.svg';
+import devpost from './images/devpost.svg';
+import email from './images/email.svg';
 
 const BoxesContainer = () => {
   const headingRef = useRef(null);

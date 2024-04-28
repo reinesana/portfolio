@@ -8,17 +8,16 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  pointer-events: auto; /* Allows mouse events for tilting */
+  pointer-events:fill; /* Allows mouse events for tilting */
 }
 
 .tilt-background {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 58vw;
   background-size: cover;
   background-position: center;
-  transition: transform 0.2s ease-out; /* Smooth transition for transform */
-  pointer-events: none; /* Prevents text interaction from blocking background tilting */
+  pointer-events:all;
 }
 
 .hero-container {
@@ -26,191 +25,125 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  
-  
+
 }
 
 .hero-container img {
-  margin: 1.2vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centers the image */
+  margin-left: 0.5vh;
+  margin-right: 0.5vh;
+  margin-top: 0.8vh;
+  position: relative;
   width: auto; /* Adjust width to maintain aspect ratio */
   max-width: 100%; /* Limits image width to prevent overflow */
   max-height: 100%; /* Limits image height to prevent overflow */
   pointer-events: none; /* Ensures tilting effect is not blocked by the image */
 }
 
-.content {
-  position: absolute;
-  top: 76%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10; /* Ensures content is above all backgrounds */
-  pointer-events: auto; /* Allows interaction with the content */
-  width: 100%;
-  text-align: center;
+
+.heroLine {
+  position:absolute;
+  width: 105%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 0.9vh;
+  margin-left:1vh;
+  margin-right:1.1vh;
+  display: flex; /* Use flexbox to manage children */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+.heroLine img {
+  margin: 1.2vh;
+  position: relative;
+  width: auto; /* Adjust width to maintain aspect ratio */
+  max-width: 100%; /* Limits image width to prevent overflow */
+  max-height: 100%;
+  transition: transform 0.3s ease; /* Smooth transition for transforms applied to the image */
+}
+
+
+
+.animated-hero h1, .animated-hero h2, .animated-hero h3 {
+  position: absolute; /* Positions elements relative to their nearest positioned ancestor */
+  font-family: 'bento'; /* Specifies the typeface */
+  font-size: calc(12vw - 1vw); /* Dynamically adjusts the font size based on the viewport width */
+  font-weight: 900; /* Sets the font weight */
+  margin: 20px; /* Increases margin for greater separation */
+  padding: 10px; /* Adds padding to space out the text within each element */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+  user-select: none; /* Disables text selection */
+  pointer-events: auto; /* Enables interaction with the elements */
+  color: white; /* Sets text color to white for better visibility */
+  
 }
 
 .animated-hero {
-  margin-right: 0vh;
-  margin-top: 15vh;
-  pointer-events: none; /* Ensures hero text does not interfere with tilting */
-}
-
-.animated-hero h1, .animated-hero h2, .animated-hero h3 {
-  text-align: end;
-  font-family: bento;
-  font-size: calc(8rem + 1vw);
-  font-weight: 900;
-  transition: font-size 0.2s ease-out;
-
-  cursor: pointer;
-  user-select: none; /* Prevents text selection */
-  position: relative;
-  pointer-events: auto; /* Allows hover effects on the text */
+  position: relative; /* Establishes a positioning context for absolutely positioned elements */
+  width: 100%; /* Full width of its parent */
+  position: absolute;
+  max-width: 10vw;
+  z-index: 5;
+  top: 39vw;
+  left: 2vw;
+  display: flex;
+  align-items: left; /* Corrected to align-items: flex-start; for consistency */
+  justify-content: flex-start; /* Aligns text to the left */
+  text-align: left;
+  height: 300px; /* Sufficient height to accommodate absolutely positioned children */
 }
 
 .animated-hero h1 {
-  color: rgb(255, 255, 255); /* Semi-transparent white */
-  top: 2vh;
-  left: -43.8vh;
-  margin-left: 100vh;
+  color: rgb(255, 255, 255); /* Sets color to white */
+  top: calc(-20vw - 2vw); /* Adjusts the top position dynamically with the viewport width */
+  left: calc(28vw + 2vw); /* Moves elements from the left based on viewport width */
 }
 
 .animated-hero h2 {
+  top: calc(0vw - 2vw); /* Adjusts the top position dynamically with the viewport width */
+  left: calc(18vw + 2vw); /* Moves elements from the left based on viewport width */
   color: rgba(155, 203, 248, 0.396); /* Light blue with transparency */
-  top: -30vh;
-  left: -22vh;
 }
 
 .animated-hero h2:hover {
-  font-size: 9rem;
-  color: white; /* White color on hover */
+  color: white; /* Changes to white on hover */
 }
 
 .animated-hero h3 {
+  top: calc(-10vw - 2vw); /* Adjusts the top position dynamically with the viewport width */
+  left: calc(41vw + 2vw); /* Moves elements from the left based on viewport width */
   color: rgb(255, 255, 255); /* Solid white */
-  left: -6vh;
-  top: -14vh;
- 
 }
 
 
+
 .hero-text {
-  width: 30vh; /* Fixed width based on viewport height, consider using vw for consistency */
+  width: 18vw; /* Consider using vw for width since vh might lead to unexpected results on very narrow screens */
   position: relative;
   display: flex;
   align-items: center; /* Vertically center the text within the container */
   justify-content: flex-start; /* Aligns text to the left */
   text-align: left;
-  top: 16vh;
-  left: 16%;
-  transform: translateX(-50%); /* Adjust this value to move more to the right on smaller screens */
+  top: 14vh;
+  right: calc(-15vw + 2vw); /* Increase rightward movement on smaller screens */
+  transform: translateX(-30%); /* Adjust this value to be less negative to move more to the right */
   font-family: 'vg5000', sans-serif;
   letter-spacing: 1px;  /* Normalized letter spacing */
   word-spacing: 1px;    /* Normalized word spacing */
   font-weight: 200;
-  font-size: calc(1.5rem + 1vw); /* Responsive base size plus a dynamic component */
   color: rgba(255, 255, 255, 0.838);
- 
-  transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
 }
+
 
 .hero-text h1 {
   font-family: vg5000;
-
   letter-spacing: 1px;  /* Normalized letter spacing */
   word-spacing:1px;    /* Normalized word spacing */
   font-weight: 200;
-  font-size: 11px;
+  font-size: calc(0.5vw + 0.3vw);
   color: rgba(255, 255, 255, 0.838);
   margin: 0 auto; 
   transition: background-color 0.5s, color 0.5s;
 }
 
 
-
-@media (max-width: 768px) {
-
-
-.content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  pointer-events: auto; /* Allows interaction with the content */
-  width: 100%;
-  text-align: center;
-}
-
-
-
-.animated-hero {
-  margin: auto;
-  pointer-events: auto; /* Allows interaction with the text */
-}
-
-.animated-hero h1, .animated-hero h2, .animated-hero h3 {
-  font-family: 'bento', sans-serif;
-  cursor: pointer;
-  user-select: none;
-  position: relative;
-  transition: color 0.5s, transform 0.3s ease-in-out;
-}
-
-.animated-hero h1 {
-  font-size: calc(4vw + 1rem); /* Responsive font size */
-  color: white;
-  transition: transform 0.3s ease-in-out;
-}
-
-.animated-hero h2 {
-  font-size: calc(3vw + 1rem); /* Responsive font size */
-  color: rgba(155, 203, 248, 0.6);
-}
-
-.animated-hero h2:hover {
-  color: white; /* White color on hover */
-}
-
-.animated-hero h3 {
-  font-size: calc(2vw + 1rem); /* Responsive font size */
-  color: white;
-}
-
-.hero-text {
-  width: auto;
-  position: absolute;
-  top: 20%; /* Adjusted for better visibility */
-  left: 5%; /* Adjusted for better text alignment */
-  right: 5%; /* Ensures padding from the right */
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-}
-
-.hero-text h1 {
-  font-family: 'vg5000', sans-serif;
-  font-size: calc(1px + 1px); 
-  color: rgba(255, 255, 255, 0.838);
-  word-spacing: normal; /* Adjusted word spacing */
-}
-
-  .hero-container, .tilt-container, .tilt-background {
-    height: 60vh;
-  }
-
-  .hero-container img {
-    opacity: 0; /* Hide the hero container on smaller screens */
-  }
-
-  .content, .animated-hero h1, .animated-hero h2, .animated-hero h3 {
-    transform: scale(0.8); /* Scale down the text for smaller screens */
-  }
-
-  .hero-text h1 {
-    font-size: calc(2.5vw + 5px); /* Larger font size for better readability */
-  }
-}

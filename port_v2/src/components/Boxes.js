@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { RiArrowRightSLine } from 'react-icons/ri'; 
+import vg5000 from './fonts/anta/Anta/Anta-Regular.ttf';
 
 const Boxes = ({ image, tag_image, title, box, githubLink }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -9,12 +10,12 @@ const Boxes = ({ image, tag_image, title, box, githubLink }) => {
     overflow: 'hidden',
     marginTop: '0px',
     marginBottom: '0px',
-    width: isHovered ? '21%' : '15%',
+    width: isHovered ? '22%' : '15%',
     transition: 'all 0.3s ease-in-out',
-    height: '460px',
+    height: '470px',
     bottom: '81vh',
-    top: '-107vh',
-    left: '2vh',
+    left: '8vh',
+    top: '3vh',
     position: 'relative', 
     cursor: 'pointer', 
   };
@@ -70,8 +71,8 @@ const Boxes = ({ image, tag_image, title, box, githubLink }) => {
 
   const buttonStyle = {
     marginTop: '0.7rem',
-    fontSize: '10px',
-    fontFamily: 'monospace',
+    fontSize: '9px',
+    fontFamily: 'anta',
     backgroundColor: isHovered ? 'rgba(255, 255, 255, 0.85)' : 'rgba(255, 255, 255, 0.51)',
     color: isHovered ? 'black' : 'white', // Assuming default button text color
     display: 'flex',
@@ -82,6 +83,7 @@ const Boxes = ({ image, tag_image, title, box, githubLink }) => {
     padding: '0.5rem 1rem',
     borderRadius: '50px',
     textDecoration: 'none'
+    
   };
 
   return (
@@ -105,13 +107,13 @@ const Boxes = ({ image, tag_image, title, box, githubLink }) => {
           }}
         />
         <div style={textStyle}>
-          <h2 style={{ fontSize: '25px', lineHeight: '1em', marginBottom: '1rem', fontFamily: 'monospace' }}>{title}</h2>
-          <p style={{ margin: '0 0 0.5rem 0', fontSize: '12px', marginBottom: '1rem' }}>
+          <h2 style={{ fontSize: '25px', lineHeight: '1em', marginBottom: '0.7rem', fontFamily: 'anta' }}>{title}</h2>
+          <p style={{ margin: '0 0 0.5rem 0', fontSize: '11px', marginBottom: '1rem', fontFamily: 'vg5000' }}>
             {box}
           </p>
           <a href={githubLink} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
           <button style={buttonStyle}>
-            GITHUB
+            gitHub
             <RiArrowRightSLine style={{ width: '20px', height: '18px', marginLeft: '0.1rem' }} />
           </button>
         </a>

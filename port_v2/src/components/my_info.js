@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import './my_info.css'; 
-import aboutMeLines from './images/about_me.png'; 
-import studySetup from './images/setup_image.png';
-import selfie from './images/me_image.png';
-import vancouver from './images/vancouver_image.png';
+import aboutMeLines from './images/about_me.svg'; 
+import studySetup from './images/setup_image.svg';
+import selfie from './images/me_image.svg';
+import vancouver from './images/vancouver_image.svg';
 
 function MyInfo() {
     const headingRef = useRef(null);

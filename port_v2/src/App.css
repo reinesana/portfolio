@@ -16,6 +16,6 @@ body {
 background: linear-gradient(0.25turn, #fafafa, #ffffff, #fffefe);
 width: 100%;
 height: 100%;
-overflow-x: hidden;
+overflow: hidden;
 /* E5E5E5 - first one, #EEEDF2 - last one*/
 }
