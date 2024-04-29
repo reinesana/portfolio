@@ -41,25 +41,22 @@
 
 
 .heroLine {
-  position:absolute;
-  width: 105%;
-  height: auto;
+  position: absolute;
+  width: 104%; /* This will cover the full width of the viewport */
+  height: auto; /* Keeps height proportional to the content */
   overflow: hidden;
   margin-top: 0.9vh;
-  margin-left:1vh;
-  margin-right:1.1vh;
+  margin-left: 1.6vh;
+  margin-right: 1.1vh;
   display: flex; /* Use flexbox to manage children */
   justify-content: center; /* Center the image horizontally */
   align-items: center; /* Center the image vertically */
 }
 
 .heroLine img {
-  margin: 1.2vh;
   position: relative;
-  width: auto; /* Adjust width to maintain aspect ratio */
-  max-width: 100%; /* Limits image width to prevent overflow */
-  max-height: 100%;
-  transition: transform 0.3s ease; /* Smooth transition for transforms applied to the image */
+  width: 100%; /* Adjust to cover the width of .heroLine */
+  max-height: 100%; /* Limits image height to prevent overflow */
 }
 
 

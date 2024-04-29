@@ -24,28 +24,33 @@
 }
 
 .aboutme_lines {
-    position: relative;
+    position: absolute;
     width: 104%; /* Use 100% of the container's width */
-    margin-top: 2.2vh;
+    margin-top: -1vw;;
+    
     margin-left: 1.5vh;
+    left: 0vw;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden; /* Ensures no overflow of child elements */
 }
 
+
 .aboutme_lines img {
-    width: 100%; /* Ensures image fills the container width */
-    height: auto; /* Maintains aspect ratio */
+    position: relative;
+    width: 100%; /* Adjust to cover the width of .heroLine */
+    max-height: 100%; /* Limits image height to prevent overflow */
 }
+
   
-  
+
 
 
 
 .study-set {
     position: absolute;
-    top: 32%;
+    top: 20vw;
     left: 17%;
     transform: translateX(-50%);
     width: 18vw;
@@ -66,7 +71,7 @@
 
 .my-picture {
     position: absolute;
-    top: 49%;
+    top: 30vw;
     left: 58%;
     transform: translateX(-50%);
     width: 17vw;
@@ -87,9 +92,9 @@
 
 .van_image {
     position: absolute;
-    top: 14%;
-    left: 72%;
-    width: 25vw;
+    top: 7vw;
+    left: 71.2%;
+    width: 26vw;
     max-width: 50vw;
     z-index: 5;
 }
@@ -163,7 +168,7 @@
     word-spacing: 1px;    /* Normalized word spacing */
     font-weight: 200;
     color: rgba(255, 255, 255, 0.838);
-    top: calc(50vw - 4vw); /* Decreases as the viewport width decreases */
+    top: calc(51vw - 4vw); /* Decreases as the viewport width decreases */
     left: 20.5vw;
 }
 
