@@ -78,20 +78,21 @@ const BoxesContainer = () => {
     }, []);  // Dependency
 
   return (
-    
+
     <div className="projects_container">
-        <div className="project_lines">
-        <img src={projectContainer} className="proj-container"></img>
-        </div>
+        <div className="project-sections">
+            <div className="project_lines">
+            <img src={projectContainer} alt="proj-container"></img>
+            </div>
         
         
 
-       
+    
     <div className="box-list" style={{ position: 'relative', display: 'flex', flexDirection: 'row', gap: '20px', flexWrap: 'wrap' }}>
-      <Boxes image={Refugee} tag_image={RefugeeTag} githubLink="https://github.com/reinesana/Red-Sea" box="Red Sea is a web-app that predicts and maps safe evacuation routes for refugees fleeing war, essential medical and humanitarian resources in Gaza." alt="Refugee image" title="REA SEA" style={{ alignSelf: 'flex-start' }} />
-      <Boxes image={Urban} tag_image={UrbanTag} githubLink="https://github.com/gprem09/Urban.I" box="Urbani is a platform aimed at revitalizing urban areas impacted by human conflicts and natural disasters utilizing AI and advanced 3D mapping." alt="Urban landscape image" title="URBANI" style={{ alignSelf: 'center' }} />
-      <Boxes image={Machine} tag_image={MachineTag} githubLink="https://github.com/reinesana/MLPro" box="Designed a machine learning library in C++, providing a set of pre-built functions and tools for deploying and enhancing AI-related software development process." alt="Machine learning model image" title="ML PRO" style={{ alignSelf: 'flex-end' }} />
-      <Boxes image={MRI} tag_image={RefugeeTag} githubLink="https://github.com/reinesana/brain_tumor_classification" box="Developed a 2D brain tumour medical imaging that identifies tumorous brain scans. The model predicts results based on a 2D Convolutional Neural Network. " alt="MRI image" title="MRI " style={{ alignSelf: 'flex-end' }} />
+    <Boxes image={Refugee} tag_image={RefugeeTag} githubLink="https://github.com/reinesana/Red-Sea" box="Red Sea is a web-app that predicts and maps safe evacuation routes for refugees fleeing war, essential medical and humanitarian resources in Gaza." alt="Refugee image" title="REA SEA" style={{ alignSelf: 'flex-start' }} />
+    <Boxes image={Urban} tag_image={UrbanTag} githubLink="https://github.com/gprem09/Urban.I" box="Urbani is a platform aimed at revitalizing urban areas impacted by human conflicts and natural disasters utilizing AI and advanced 3D mapping." alt="Urban landscape image" title="URBANI" style={{ alignSelf: 'center' }} />
+    <Boxes image={Machine} tag_image={MachineTag} githubLink="https://github.com/reinesana/MLPro" box="Designed a machine learning library in C++, providing a set of pre-built functions and tools for deploying and enhancing AI-related software development process." alt="Machine learning model image" title="ML PRO" style={{ alignSelf: 'flex-end' }} />
+    <Boxes image={MRI} tag_image={RefugeeTag} githubLink="https://github.com/reinesana/brain_tumor_classification" box="Developed a 2D brain tumour medical imaging that identifies tumorous brain scans. The model predicts results based on a 2D Convolutional Neural Network. " alt="MRI image" title="MRI " style={{ alignSelf: 'flex-end' }} />
     </div>
 
     <div className="animated-projects">
@@ -100,38 +101,28 @@ const BoxesContainer = () => {
                 </h1>
                 
     </div>
-
-    <div className="contact-container">
-   
         <div className="outro">
         <h1>Want a closer look at Shana's projects? Check out her accomplishments on devpost or feel free to connect with her on Linkedin.</h1>
         </div>
+
+
         
 
-         <a href="https://www.linkedin.com/in/shana-nursoo-363826189/" className="contact-linkedin"><img src={linkedin}/></a>
-         
-
-
-
-        <div className="contact">
-        <a href="https://devpost.com/17shana2017?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" className="contact-devpost"><img src={devpost}/></a>
-        <a href="mailto:shana_nursoo@sfu.ca" className="contact-email"><img src={email}/></a>
-
+        <div className="contact-linkedin"></div>
+        <a href="https://www.linkedin.com/in/shana-nursoo-363826189/"><img src={linkedin}/></a>
         </div>
 
-   
-   
-        
-         
-                
- 
+        <div className="contact-devpost">
+        <a href="https://devpost.com/17shana2017?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"><img src={devpost}/></a>
+        </div>
 
-    </div>
-    </div>
+        <div className="contact-email">
+        <a href="mailto:shana_nursoo@sfu.ca"><img src={email}/></a>
+        </div>
 
 
 
-
+    </div>   
   );
 };
 

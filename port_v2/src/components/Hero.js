@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './Hero.css'; 
-import heroImage from './images/hero_image.png';
+import heroImage from './images/hero_image.jpg';
 import heroContainer from './images/hero_container.svg';
 
 function Hero() {

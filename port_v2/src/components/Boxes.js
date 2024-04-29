@@ -1,24 +1,29 @@
 import React, { useState } from 'react';
 import { RiArrowRightSLine } from 'react-icons/ri'; 
-import vg5000 from './fonts/anta/Anta/Anta-Regular.ttf';
 
 const Boxes = ({ image, tag_image, title, box, githubLink }) => {
   const [isHovered, setIsHovered] = useState(false);
 
+ 
+
   const cardStyle = {
+    position: 'relative',
+    top: '7vw',
+    left: '2vw',
+    transition: 'all 0.3s ease-in-out',
+    width: isHovered ? '19vw' : '14vw',
+    maxWidth: '50vw',
+    zIndex: 5,
     borderRadius: '15px',
     overflow: 'hidden',
     marginTop: '0px',
     marginBottom: '0px',
-    width: isHovered ? '22%' : '15%',
-    transition: 'all 0.3s ease-in-out',
-    height: '470px',
-    bottom: '81vh',
-    left: '8vh',
-    top: '3vh',
-    position: 'relative', 
-    cursor: 'pointer', 
-  };
+    height: '43vw',
+    cursor: 'pointer',
+};
+
+
+
 
   // Inline styles for other elements
   const overlayStyle = {
@@ -51,6 +56,7 @@ const Boxes = ({ image, tag_image, title, box, githubLink }) => {
     padding: '1rem',
     opacity: '0.8',
     zIndex: '3',
+    
   };
 
   const contentBoxStyle = {

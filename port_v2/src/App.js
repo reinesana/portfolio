@@ -10,7 +10,7 @@ import { Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div>
-      <Navbar />
+     
       <div id="home-section">
         <Landing />
       </div>

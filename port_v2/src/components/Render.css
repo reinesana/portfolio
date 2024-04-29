@@ -7,60 +7,38 @@
 
 .projects_container {
   display: flex;
-  position: relative;
-  top: 0;  
-  width: 100%;  
-  flex-wrap: wrap;  
-  justify-content: space-around;  
-  align-items: center; 
-  margin-top: 2vh;  
+    position: relative;
+    top: 0; /* Adjusted from 3.8vw to 0 for alignment consistency */
+    width: 100%; /* Changed from 70vw to 100% for better fluidity */
+    flex-wrap: wrap; /* Changed from nowrap for better responsiveness */
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2vh; /* Added some vertical spacing */
 }
 
 .project_lines {
-  position: relative;
-  width: 100%; 
+  position: absolute;
+  width: 104%; /* Use 100% of the container's width */
+  margin-top: 1.1vw;;
+  margin-left: 1.5vh;
+  left: 0vw;
   display: flex;
   justify-content: center;
-  align-items: center; 
-  overflow: hidden;  
-  padding: 0; 
+  align-items: center;
+  overflow: hidden; /* Ensures no overflow of child elements */
 }
+
 
 .project_lines img {
-  margin-left: 10vh;
-  margin-top: 2vh;
-  width: 104%;  
-  height: auto;  
+  position: relative;
+  width: 100%; /* Adjust to cover the width of .heroLine */
+  max-height: 100%; /* Limits image height to prevent overflow */
 }
-
-
-
-
-
-
-.box-list {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  width: 100%;
-  margin-top: 2vh;
-  margin-left: 2vh;
-  margin-right: 2vh;
-  margin-bottom: 0; 
-  position: absolute;
-  top: -50vw;
-  left: 2vw;
-  align-items: left;     /* Center-align items for better visual balance */
-  justify-content: left;
-
-}
-
-
 
 
 .animated-projects {
-  position:absolute;
-  z-index: 10; /* Ensures text appears above images */
+  position: absolute;
+  z-index: 10;
   width: calc(22vw - 5vw);
   text-align: end;
   top: calc(7vw + 2vw);
@@ -69,12 +47,12 @@
 
 .animated-projects h1 {
   font-family: vg5000;
-  letter-spacing: 1px;  /* Normalized letter spacing */
-  word-spacing:1px;    /* Normalized word spacing */
+  letter-spacing: 1px;
+  word-spacing: 1px;
   font-weight: 200;
-  font-size: calc(15px - 3px);
-  color: rgb(113, 113, 113);
-  margin: 0 auto; 
+  font-size: calc(13.7px - 3px);
+  color: rgb(127, 126, 126);
+  margin: 0 auto;
   transition: background-color 0.5s, color 0.5s;
 }
 
@@ -83,102 +61,66 @@
   cursor: pointer;
 }
 
-
-
-.contact-container {
-  display: flex;
-  padding-top: 0; 
-  padding-left: 0;   
-  padding-right: 20px; 
-  padding-bottom: 20px; 
-  align-items: left;     /* Center-align items for better visual balance */
-  justify-content: left;
-  position:absolute;
-  
+.contact-devpost img,
+.contact-email img,
+.contact-linkedin img {
+  position: absolute;
+    z-index: 5;
+    display: flex;
+    align-items: right; /* Corrected to align-items: flex-start; for consistency */
+    justify-content: flex-start; /* Aligns text to the left */
+    text-align: right;
+    transform: translate(-35%, -40%);
+    width: calc(13.5vw - 5vw);
+    
 }
-
-
-.contact {
-  display: flex;       /* Ensures flexbox layout */
-  justify-content: flex-start; /* Aligns children to the start */
-  position: relative;  
-  
-
-}
-
 
 
 .contact-devpost img {
-  margin: 1vh;
-  width: 113px;  /* Example width; adjust as necessary */
-  height: auto; /* Example height; ensure it matches the width or as desired */
- 
-  position: relative;
-  top: 8vw;
-  right: 10vw;
+  right: calc(9vw + 1vw);
+    top: calc(51vw - 4vw); /* Decreases as the viewport width decreases */
 }
 
-.contact-email img {
-  margin: 1vh;
-  width: 120px; 
-  height: auto;
-  top: 8vw;
-  transition: transform 0.3s ease; 
-  position: relative;
-  right: 10vw;
+.contact-email img{
+  right: calc(-1vw + 1vw);
+    top: calc(51vw - 4vw); /* Decreases as the viewport width decreases */
 }
-
-
-
 
 .contact-linkedin {
-  width: auto;  /* Increased width to 150 pixels */
-  height: 37px;  /* New fixed height, change as necessary */
-  display: flex;
-  justify-content: flex-start;
   right: 44vw;
   top: 2vw;
-  position: relative;
-  padding: 0;
-  margin: 0;
-
-
+  width: auto;
+  height: 37px;
 }
 
-.contact-linkedin:hover {
-  transform: scale(1.05);
-  transition: transform 0.2s ease-in-out;
-  
-}
 
-.contact-devpost:hover {
-  transform: scale(1.1);
-  transition: transform 0.2s ease-in-out;
-  
-}
-
-.contact-email:hover {
-  transform: scale(1.1);
-  transition: transform 0.2s ease-in-out;
-  
-}
 
 .outro {
-  width: 600px;
-  position: relative;
-  display:flex;
-  text-align: flex-end;
-  left: 25vw;
-  top: 2vw;
-  text-align: right;
+  position: absolute;
+    z-index: 5;
+    display: flex;
+    align-items: right; /* Corrected to align-items: flex-start; for consistency */
+    justify-content: flex-start; /* Aligns text to the left */
+    text-align: right;
+    transform: translate(-35%, -40%);
+    top: calc(51vw - 4vw); /* Decreases as the viewport width decreases */
+    width: calc(25vw - 5vw);
+    top: calc(40vw + 2vw);
+    right: calc(-5vw + 1vw);
 }
-
 
 .outro h1 {
-  color: rgba(71, 71, 71, 0.882);
-  font-size: calc(1vw + 0.3vw);
   font-family: anta;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-weight: 200;
+  font-size: calc(14.7px - 3px);
+  color: rgb(127, 126, 126);
+  margin: 0 auto;
+  transition: background-color 0.5s, color 0.5s;
 }
 
-
-
+.outro-projects h1:hover {
+  color: rgb(20, 20, 20);
+  cursor: pointer;
+}
