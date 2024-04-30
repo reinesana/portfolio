@@ -11,7 +11,6 @@ import MachineTag from './images/ML_tag.png'; // Path to yellow tag image for ma
 import projectContainer from './images/projects_container.svg';
 import linkedin from './images/linkedin.svg';
 import devpost from './images/devpost.svg';
-import email from './images/email.svg';
 
 const BoxesContainer = () => {
   const headingRef = useRef(null);
@@ -106,19 +105,17 @@ const BoxesContainer = () => {
         </div>
 
 
-        
-
-        <div className="contact-linkedin"></div>
-        <a href="https://www.linkedin.com/in/shana-nursoo-363826189/"><img src={linkedin}/></a>
+    
         </div>
 
         <div className="contact-devpost">
         <a href="https://devpost.com/17shana2017?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"><img src={devpost}/></a>
         </div>
 
-        <div className="contact-email">
-        <a href="mailto:shana_nursoo@sfu.ca"><img src={email}/></a>
+        <div className="contact-linkedin">
+        <a href="https://www.linkedin.com/in/shana-nursoo-363826189/"><img src={linkedin}/></a>
         </div>
+
 
 
 

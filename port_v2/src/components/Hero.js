@@ -15,7 +15,7 @@ function Hero() {
       const rect = tilt.getBoundingClientRect();
       const x = (e.clientX || e.touches[0].clientX) - rect.left - (rect.width / 2);
       const y = (e.clientY || e.touches[0].clientY) - rect.top - (rect.height / 2);
-      const multiplier = 0.07;
+      const multiplier = 0.09;
 
       const xRotate = (y / rect.height) * multiplier * 180;
       const yRotate = -(x / rect.width) * multiplier * 180;

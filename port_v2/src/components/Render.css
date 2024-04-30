@@ -62,7 +62,6 @@
 }
 
 .contact-devpost img,
-.contact-email img,
 .contact-linkedin img {
   position: absolute;
     z-index: 5;
@@ -77,21 +76,31 @@
 
 
 .contact-devpost img {
-  right: calc(9vw + 1vw);
-    top: calc(51vw - 4vw); /* Decreases as the viewport width decreases */
+  right: calc(10vw + 1vw);
+    top: calc(51vw - 4vw); 
+    transition: transform 0.3s ease; 
+    transform-origin: center;
 }
 
-.contact-email img{
-  right: calc(-1vw + 1vw);
-    top: calc(51vw - 4vw); /* Decreases as the viewport width decreases */
+.contact-linkedin img{
+  width: calc(15vw - 5vw);
+  right: calc(-1.5vw + 1vw);
+  top: calc(51vw - 4vw); 
+  transition: transform 0.3s ease; 
+  transform-origin: center;
 }
 
-.contact-linkedin {
-  right: 44vw;
-  top: 2vw;
-  width: auto;
-  height: 37px;
+.contact-devpost img:hover {
+  transform: scale(1.05) translateX(-30%) translateY(-40%);
 }
+
+.contact-linkedin img:hover {
+  transform: scale(1.05) translateX(-30%) translateY(-40%);
+}
+
+
+
+
 
 
 
